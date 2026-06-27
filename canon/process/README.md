@@ -92,8 +92,8 @@ Reviews are run by the orchestrator, not supplied by the operator. Use
 Each phase has:
 
 - iterative Codex review rounds.
-- triage for every finding: fixed, rejected with rationale, or operator-accepted
-  debt.
+- triage for every finding: fixed, rejected with rationale, operator-accepted
+  debt, or blocked for the operator.
 - a double final seal on an unchanged artifact.
 
 `P0` and `P1` findings cannot become debt. `P2` and `P3` debt requires explicit
@@ -101,7 +101,7 @@ operator acceptance and must be recorded in local state.
 
 ### Finding Verification
 
-Reviewer findings are claims, not facts; in short, reviewer findings are claims.
+The rule is simple: reviewer findings are claims, not facts.
 The orchestrator owns triage and must verify every finding against files, diffs, tests, or commands before deciding whether it is fixed, rejected, accepted debt, or blocked for the operator.
 
 Do not triage from memory or chat, and do not treat prior review output as
