@@ -102,7 +102,8 @@ operator acceptance and must be recorded in local state.
 ### Finding Verification
 
 The rule is simple: reviewer findings are claims, not facts.
-The orchestrator owns triage. Evidence must come from files, diffs, tests, or commands.
+The orchestrator owns triage.
+Evidence must come from files, diffs, tests, or commands.
 Verify every finding before deciding whether it is fixed, rejected, accepted
 debt, or blocked for the operator.
 
