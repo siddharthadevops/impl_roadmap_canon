@@ -99,6 +99,45 @@ Each phase has:
 `P0` and `P1` findings cannot become debt. `P2` and `P3` debt requires explicit
 operator acceptance and must be recorded in local state.
 
+### Finding Verification
+
+Reviewer findings are claims, not facts; in short, reviewer findings are claims.
+The orchestrator owns triage and must verify every finding against files, diffs, tests, or commands before deciding whether it is fixed, rejected, accepted debt, or blocked for the operator.
+
+Do not triage from memory or chat, and do not treat prior review output as
+authority. A prior finding may identify what to inspect, but the decision must
+come from the current artifact and direct evidence.
+
+For each finding, record the outcome in the durable review log:
+
+- `fixed`: the finding was valid and corrected, then re-reviewed.
+- `rejected`: the finding was invalid, out of scope, or contradicted by the
+  reviewed artifact/canon, after the disagreement protocol below.
+- `accepted debt`: only `P2`/`P3`, only with explicit operator acceptance.
+- `blocked/operator`: the orchestrator cannot resolve the issue under the
+  process rules.
+
+### Consultation And Adjudication
+
+The orchestrator adjudicates; reviewers, sub-agents, and consulted LLMs do not.
+When the orchestrator has a doubt or disagrees with a finding, it must discuss
+the issue with a different LLM family when one is available. If Codex is the
+orchestrator, use Claude; if Claude is the orchestrator, use Codex. If a
+same-family sub-agent raises the doubt, treat it as the orchestrator's family
+for this rule and consult a different LLM family.
+
+The consultation/adjudication prompt must include the artifact, the finding or
+doubt, the orchestrator's proposed resolution, and the files, diffs, tests, or
+commands already checked. The orchestrator then makes the triage decision.
+
+If a different LLM family is unavailable, or if cross-family discussion does not
+leave a clear resolution, stop and consult the operator. Do not reject a `P0` or
+`P1` finding by orchestrator-only judgment, and never turn `P0`/`P1` into debt.
+
+Consultation and adjudication rounds are evidence, not review rounds. Record
+their result in the durable review log and keep any scratch output under
+`implementation/review-work/`.
+
 ## Reopen Rule
 
 A seal covers an unchanged artifact. A later substantive change to sealed
@@ -137,4 +176,3 @@ short and executable:
 Avoid pseudo-code, defensive FAQs, repetition, and future milestone chains. If a
 document starts specifying control flow that belongs in code, reduce it to
 observable contracts, invariants, and tests.
-

@@ -44,6 +44,12 @@ rm -f "$RAW" "$LAST"
 
 Free-form adjudication or consultation rounds use the same launch/watch pattern
 but save the whole last message plus `EXIT=`, with no `VERDICT:` parsing.
+Their prompts must include the disputed finding or doubt, the orchestrator's
+proposed resolution, and the files, diffs, tests, or commands already checked.
+They are not review rounds: reviewer findings are claims, not facts; the
+orchestrator still adjudicates after reading the different LLM family response,
+including when the doubt came from a same-family sub-agent. If the issue remains
+unresolved, stop and consult the operator.
 
 ## Prompt Shape
 
@@ -55,6 +61,14 @@ Keep prompts thin. Include:
 - the reuse gate.
 - the severity rubric.
 - the no-edit instruction.
+- the rule that reviewer findings are claims, not facts.
+- the rule that the orchestrator must verify findings against files, diffs,
+  tests, or commands before triage.
+- the rule that memory or chat is not evidence for triage.
+- the rule that doubts and disagreements are discussed with a different LLM
+  family when available, including doubts raised by a same-family sub-agent.
+- the rule that unresolved disagreement, or unavailable cross-family
+  consultation, stops and asks the operator.
 - instructions to ignore prior review outputs, review logs, closures, and work
   log findings.
 - output format.
@@ -84,4 +98,3 @@ Durable evidence lives in tracked local state:
 - skeleton or process-doc debt is recorded in the relevant review log.
 
 Scratch evidence is regenerable and should not be committed.
-
