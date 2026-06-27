@@ -16,7 +16,10 @@ Delivery follows the local canon:
 |---|---|---|---|---|---|
 | S0 | Self-canon bootstrap review | Canon bootstrap | Closed (reviewed release `v0.1.1`) | Process layout | [README](self-canon-bootstrap-review/README.md) |
 | S1 | Cross-model adjudication and finding verification | Process canon | Closed (reviewed release `v0.2.0`) | Process layout | [README](cross-model-adjudication/README.md) |
+| S2 | Agent99/Tutor process consolidation | Process canon | Open (skeleton ready) | Process layout | [README](agent99-tutor-process-consolidation/README.md) |
 
 ## Active Continuation
 
-No active milestone. Read the roadmap before opening the next canon change.
+**S2 (`agent99-tutor-process-consolidation`) is open.** Continue from its
+milestone README. The current unit is Slice 01 documentation after the sealed
+skeleton is committed.
