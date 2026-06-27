@@ -560,3 +560,175 @@ worktree before/after snapshots.
 - Claude CLI seal half: `VERDICT: 0 findings`, `EXIT=0`, using
   `claude -p --model opus --effort max --permission-mode bypassPermissions`.
 - Outcome: Slice 02 implementation sealed `review_clean`; no accepted debt.
+
+## Slice 03 Documentation
+
+### slice-03-doc-r1
+
+Codex review completed with `VERDICT: 0 findings`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+### slice-03-doc-seal-a1
+
+- Codex seal half: `VERDICT: 1 finding`, `EXIT=0`.
+- Claude CLI seal half: `VERDICT: 2 findings`, `EXIT=0`, using
+  `claude -p --model opus --effort max --permission-mode bypassPermissions`.
+- Outcome: seal broken; fixed all findings and returned to the Codex loop.
+- Codex `F01 [P2]` fixed: tests now require content hashing for pre-existing
+  untracked non-ignored files.
+- Claude `F01 [P1]` fixed: acceptance and tests now require removing the old
+  conditional-broad-access deviation wording from the common canon.
+- Claude `F02 [P3]` fixed: egress criteria now state operator confirmation
+  does not override never-send categories.
+
+### slice-03-doc-r2
+
+Codex review completed with `VERDICT: 0 findings`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+### slice-03-doc-seal-a2
+
+- Codex seal half: `VERDICT: 1 finding`, `EXIT=0`.
+- Claude CLI seal half: `VERDICT: 1 finding`, `EXIT=0`, using
+  `claude -p --model opus --effort max --permission-mode bypassPermissions`.
+- Outcome: seal broken; fixed both findings and returned to the Codex loop.
+- Codex `F01 [P1]` fixed: continuation now records that Slice 03 documentation
+  returns to a fresh review after the seal-a2 fix.
+- Claude `F01 [P3]` fixed: Reuse Posture now separates Tutor's stale read-only
+  default from its reusable never-send/redacted-excerpt egress boundary.
+
+### slice-03-doc-r3
+
+Codex review completed with `VERDICT: 2 findings`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+- `F01 [P2]` fixed: never-send category tests now require each sensitive
+  category independently.
+- `F02 [P2]` fixed: the Slice 04 guard now blocks fallback-reviewer and usable
+  seal-evidence wording, not only the original exact phrases.
+
+### slice-03-doc-r4
+
+Codex review completed with `VERDICT: 2 findings`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+- `F01 [P1]` fixed: the Slice 04 guard now blocks mandatory reviewer-selection
+  and seal-independence wording in the common canon.
+- `F02 [P2]` fixed: acceptance and tests now require S2 active continuation to
+  stop referencing the temporary broad/bypass deviation after implementation.
+
+### slice-03-doc-r5
+
+Codex review completed with `VERDICT: 2 findings`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+- `F01 [P2]` fixed: expected files now include the global milestone index.
+- `F02 [P2]` fixed: egress tests now require external-service and unrelated
+  personal-material wording.
+
+### slice-03-doc-r6
+
+Codex review completed with `VERDICT: 2 findings`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+- `F01 [P2]` fixed: tests now require Claude-related worktree invalidation
+  wording, not only the Codex watchdog.
+- `F02 [P2]` fixed: expected local milestone files are now listed explicitly
+  instead of using a broad milestone-directory glob.
+
+### slice-03-doc-r7
+
+Codex review completed with `VERDICT: 1 finding`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+- `F01 [P2]` fixed: acceptance and tests now require the milestone README to
+  stop describing broad reviewer invocation as a temporary S2-local deviation
+  once the common rule is implemented.
+
+### slice-03-doc-r8
+
+Codex review completed with `VERDICT: 1 finding`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+- `F01 [P1]` fixed: Dependencies now describe Claude CLI availability without
+  importing Slice 04 seal-counterpart or reviewer-selection semantics.
+
+### slice-03-doc-r9
+
+Codex review completed with `VERDICT: 2 findings`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+- `F01 [P2]` fixed: no-edit tests now require create, delete, move, and format
+  prohibitions.
+- `F02 [P2]` fixed: egress tests now require the external-service/read-material
+  warning to cover Claude CLI or review CLIs, not only Codex.
+
+### slice-03-doc-r10
+
+Codex review completed with `VERDICT: 0 findings`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+### slice-03-doc-seal-a3
+
+- Codex seal half: `VERDICT: 0 findings`, `EXIT=0`.
+- Claude CLI seal half: `VERDICT: 3 findings`, `EXIT=0`, using
+  `claude -p --model opus --effort max --permission-mode bypassPermissions`.
+- Outcome: seal broken; fixed all findings and returned to the Codex loop.
+- Claude `F01 [P1]` fixed: stale-deviation cleanup now applies to active local
+  state only; sealed skeleton sections are not rewritten unless explicitly
+  reopened.
+- Claude `F02 [P2]` fixed: tests now require local process deviation precedence
+  to remain in the common canon.
+- Claude `F03 [P3]` fixed: active continuation cleanup tests now cover both
+  documentation review and documentation seal wording.
+
+### slice-03-doc-r11
+
+Codex review completed with `VERDICT: 0 findings`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+### slice-03-doc-seal-a4
+
+- Codex seal half: `VERDICT: 0 findings`, `EXIT=0`.
+- Claude CLI seal half: `VERDICT: 1 finding`, `EXIT=0`, using
+  `claude -p --model opus --effort max --permission-mode bypassPermissions`.
+- Outcome: seal broken; fixed the finding and returned to the Codex loop.
+- Claude `F01 [P2]` fixed: redacted non-sensitive excerpt coverage is now an
+  independent test, not an `operator confirmation` alternation.
+
+### slice-03-doc-r12
+
+Codex review completed with `VERDICT: 0 findings`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+### slice-03-doc-seal-a5
+
+- Codex seal half: `VERDICT: 1 finding`, `EXIT=0`.
+- Claude CLI seal half: `VERDICT: 1 finding`, `EXIT=0`, using
+  `claude -p --model opus --effort max --permission-mode bypassPermissions`.
+- Outcome: seal broken; fixed the valid Claude finding and returned to the
+  Codex loop.
+- Codex `F01 [P1]` rejected after Claude consultation: `review_requested` is
+  the pending-seal state, and `ready` is recorded only after a clean seal.
+- Claude `F01 [P2]` fixed: active-continuation cleanup coverage now catches the
+  broad-deviation instruction even when the phrase wraps across lines.
+
+### slice-03-doc-r13
+
+Codex review completed with `VERDICT: 1 finding`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+- `F01 [P2]` fixed: active-state cleanup now uses multiline whitespace matching,
+  so wrapped continuation/status wording cannot evade the implementation test.
+
+### slice-03-doc-r14
+
+Codex review completed with `VERDICT: 0 findings`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+### slice-03-doc-seal-a6
+
+- Codex seal half: `VERDICT: 0 findings`, `EXIT=0`.
+- Claude CLI seal half: `VERDICT: 0 findings`, `EXIT=0`, using
+  `claude -p --model opus --effort max --permission-mode bypassPermissions`.
+- Outcome: Slice 03 documentation sealed `ready`; no accepted debt.

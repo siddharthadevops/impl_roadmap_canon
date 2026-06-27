@@ -1,6 +1,6 @@
 # Agent99/Tutor Process Consolidation
 
-Status: open (Slice 03 documentation)
+Status: open (Slice 03 implementation)
 
 ## Boundary
 
@@ -94,7 +94,7 @@ current common canon.
 |---|---|---|---|
 | 01 | Local context and support order | closed | Add required local context to Required Local Layout and define local support-order constraints. |
 | 02 | Non-canonical planning material | closed | Add brainstorming, `_drafts` implementation guides, review-work, and Adopt / Revise / Reject rules. |
-| 03 | Broad reviewer invocation | planned | Add bypass reviewer commands, no-edit guardrails, egress boundaries, and worktree checks. |
+| 03 | Broad reviewer invocation | ready | Add bypass reviewer commands, no-edit guardrails, egress boundaries, and worktree checks. |
 | 04 | Seal reviewer independence | planned | Add independent seal reviewer selection, fallback handling, and usable-output evidence rules. |
 
 ## Work Log
@@ -125,14 +125,59 @@ current common canon.
 | 22 | Slice 02 | impl | verified | | 70310be | Full Slice 02 test list passed. |
 | 23 | Slice 02 | impl | review_clean | slice-02-impl-r1 + seal-a1 | 70310be | Codex review and double seal clean; no accepted debt. |
 | 24 | Slice 02 | closure | closed | | | Closure/bookkeeping recorded. |
+| 25 | Slice 03 | doc | review_requested | slice-03-doc-r1 | | Drafted broad reviewer invocation slice note. |
+| 26 | Slice 03 | doc | findings | slice-03-doc-seal-a1 | | Seal broke with one Codex P2, one Claude P1, and one Claude P3; all valid. |
+| 27 | Slice 03 | doc | fixed | slice-03-doc-seal-a1 | | Added stale-deviation, untracked-hash, and never-send clarification tests. |
+| 28 | Slice 03 | doc | review_requested | slice-03-doc-r2 | | Fresh review launched after seal-a1 fixes. |
+| 29 | Slice 03 | doc | findings | slice-03-doc-seal-a2 | | Seal broke with one Codex P1 and one Claude P3; both valid. |
+| 30 | Slice 03 | doc | fixed | slice-03-doc-seal-a2 | | Fixed continuation and traced the reusable egress floor. |
+| 31 | Slice 03 | doc | review_requested | slice-03-doc-r3 | | Fresh review launched after seal-a2 fixes. |
+| 32 | Slice 03 | doc | findings | slice-03-doc-r3 | | Codex found two P2 test-strength gaps; both valid. |
+| 33 | Slice 03 | doc | fixed | slice-03-doc-r3 | | Split never-send category tests and broadened the Slice 04 guard. |
+| 34 | Slice 03 | doc | review_requested | slice-03-doc-r4 | | Fresh review due after r3 fixes. |
+| 35 | Slice 03 | doc | findings | slice-03-doc-r4 | | Codex found one P1 and one P2; both valid. |
+| 36 | Slice 03 | doc | fixed | slice-03-doc-r4 | | Blocked seal-selection bleed-through and required continuation cleanup after implementation. |
+| 37 | Slice 03 | doc | review_requested | slice-03-doc-r5 | | Fresh review due after r4 fixes. |
+| 38 | Slice 03 | doc | findings | slice-03-doc-r5 | | Codex found two P2 readiness gaps; both valid. |
+| 39 | Slice 03 | doc | fixed | slice-03-doc-r5 | | Added the global milestone index and fuller egress tests. |
+| 40 | Slice 03 | doc | review_requested | slice-03-doc-r6 | | Fresh review due after r5 fixes. |
+| 41 | Slice 03 | doc | findings | slice-03-doc-r6 | | Codex found two P2 guardrail gaps; both valid. |
+| 42 | Slice 03 | doc | fixed | slice-03-doc-r6 | | Added Claude worktree test coverage and narrowed expected local milestone files. |
+| 43 | Slice 03 | doc | review_requested | slice-03-doc-r7 | | Fresh review due after r6 fixes. |
+| 44 | Slice 03 | doc | findings | slice-03-doc-r7 | | Codex found one P2 stale-local-state gap; valid. |
+| 45 | Slice 03 | doc | fixed | slice-03-doc-r7 | | Required the milestone README to stop describing broad invocation as a temporary S2-local deviation after implementation. |
+| 46 | Slice 03 | doc | review_requested | slice-03-doc-r8 | | Fresh review due after r7 fix. |
+| 47 | Slice 03 | doc | findings | slice-03-doc-r8 | | Codex found one P1 Slice 04 boundary leak; valid. |
+| 48 | Slice 03 | doc | fixed | slice-03-doc-r8 | | Reworded Claude dependency without seal-counterpart semantics. |
+| 49 | Slice 03 | doc | review_requested | slice-03-doc-r9 | | Fresh review due after r8 fix. |
+| 50 | Slice 03 | doc | findings | slice-03-doc-r9 | | Codex found two P2 test gaps; both valid. |
+| 51 | Slice 03 | doc | fixed | slice-03-doc-r9 | | Added complete no-edit and Claude/review-CLI egress test coverage. |
+| 52 | Slice 03 | doc | review_requested | slice-03-doc-r10 | | Fresh review due after r9 fixes. |
+| 53 | Slice 03 | doc | review_requested | slice-03-doc-r10 + seal-a3 | | Codex r10 clean; documentation double seal launched. |
+| 54 | Slice 03 | doc | findings | slice-03-doc-seal-a3 | | Seal broke with three Claude findings; all valid. |
+| 55 | Slice 03 | doc | fixed | slice-03-doc-seal-a3 | | Limited stale-deviation cleanup to active state, added local-deviation precedence test, and fixed continuation cleanup coverage. |
+| 56 | Slice 03 | doc | review_requested | slice-03-doc-r11 | | Fresh review due after seal-a3 fixes. |
+| 57 | Slice 03 | doc | review_requested | slice-03-doc-r11 + seal-a4 | | Codex r11 clean; documentation double seal launched. |
+| 58 | Slice 03 | doc | findings | slice-03-doc-seal-a4 | | Seal broke with one Claude P2; valid. |
+| 59 | Slice 03 | doc | fixed | slice-03-doc-seal-a4 | | Split redacted-excerpt egress coverage into its own test. |
+| 60 | Slice 03 | doc | review_requested | slice-03-doc-r12 | | Fresh review due after seal-a4 fix. |
+| 61 | Slice 03 | doc | review_requested | slice-03-doc-r12 + seal-a5 | | Codex r12 clean; documentation double seal launched. |
+| 62 | Slice 03 | doc | findings | slice-03-doc-seal-a5 | | Seal broke with one rejected Codex P1 and one valid Claude P2. |
+| 63 | Slice 03 | doc | fixed | slice-03-doc-seal-a5 | | Strengthened active-continuation cleanup coverage against line wrapping. |
+| 64 | Slice 03 | doc | review_requested | slice-03-doc-r13 | | Fresh review due after seal-a5 fix. |
+| 65 | Slice 03 | doc | findings | slice-03-doc-r13 | | Codex found one P2 multiline cleanup gap; valid. |
+| 66 | Slice 03 | doc | fixed | slice-03-doc-r13 | | Switched active-state cleanup test to multiline whitespace matching and aligned milestone status. |
+| 67 | Slice 03 | doc | review_requested | slice-03-doc-r14 | | Fresh review due after r13 fix. |
+| 68 | Slice 03 | doc | review_requested | slice-03-doc-r14 + seal-a6 | | Codex r14 clean; documentation double seal launched. |
+| 69 | Slice 03 | doc | ready | slice-03-doc-r14 + seal-a6 | | Double seal clean; no accepted debt. |
 
 ## Current Slice
 
-Slice 03 documentation.
+Slice 03 implementation.
 
 ## Continuation
 
-Draft the Slice 03 broad reviewer invocation note. For S2 only, use the
-operator-authorized broad reviewer invocation deviation with explicit no-edit
-prompt text, relevance-driven egress boundaries, and before/after worktree
-checks.
+Implement sealed Slice 03 broad reviewer invocation documentation. For S2 only,
+use the operator-authorized broad reviewer invocation deviation until the common
+rule is implemented, with explicit no-edit prompt text, relevance-driven egress
+boundaries, and before/after worktree checks.
