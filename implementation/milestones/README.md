@@ -14,10 +14,9 @@ Delivery follows the local canon:
 
 | Roadmap | Milestone | Area | Status | Layout | Source |
 |---|---|---|---|---|---|
-| S0 | Self-canon bootstrap review | Canon bootstrap | Open (skeleton sealed `ready`) | Process layout | [README](self-canon-bootstrap-review/README.md) |
+| S0 | Self-canon bootstrap review | Canon bootstrap | Closed (reviewed release `v0.1.1`) | Process layout | [README](self-canon-bootstrap-review/README.md) |
 
 ## Active Continuation
 
-**S0 (`self-canon-bootstrap-review`) is open.** Continue from its milestone
-README. The current unit is `Slice 01 - Bootstrap review and reviewed release`
-implementation/release review.
+No milestone is open. Continue by reading `../roadmap.md` before opening the
+next canon change.

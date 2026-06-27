@@ -1,6 +1,6 @@
 # Self-Canon Bootstrap Review
 
-Status: open (skeleton sealed `ready`)
+Status: closed
 
 ## Boundary
 
@@ -35,7 +35,7 @@ the consuming repository.
 
 | Slice | Title | Status | Notes |
 |---|---|---|---|
-| 01 | Bootstrap review and reviewed release | ready | Review existing canon + templates, fix findings, tag reviewed release. |
+| 01 | Bootstrap review and reviewed release | closed | Reviewed existing canon + templates, fixed findings, prepared reviewed release. |
 
 ## Work Log
 
@@ -43,12 +43,14 @@ the consuming repository.
 |---|---|---|---|---|---|
 | Skeleton | doc | ready | doc-r2 + seal-a1 Codex/Claude | | Double seal clean; no accepted debt. |
 | 01 | doc | ready | doc-r12 + seal-a3 Codex/Claude | ae6454c | Double seal clean; no accepted debt. |
+| 01 | impl | review_clean | impl-r1 + seal-a1 Codex/Claude | 764568c | Release content reviewed; no accepted debt. |
+| 01 | closure | closed | | | Closure/bookkeeping for reviewed tag `v0.1.1`. |
 
 ## Current Slice
 
-Slice 01 - Bootstrap review and reviewed release.
+None. S0 is closed.
 
 ## Continuation
 
-Continue with Slice 01 implementation/release review. Review and fix the
-bootstrap content, then close S0 with a reviewed release tag.
+S0 is closed. Continue by reading the global milestone index and roadmap before
+opening any future canon change.

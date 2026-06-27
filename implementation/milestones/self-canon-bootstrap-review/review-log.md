@@ -38,7 +38,21 @@ Codex review completed with `VERDICT: 0 findings`, `EXIT=0`.
 
 ## Slice 01 Implementation
 
-Pending.
+### slice-01-impl-r1
+
+Codex review completed with `VERDICT: 0 findings`, `EXIT=0`.
+
+### slice-01-impl-seal-a1
+
+- Codex seal half: `VERDICT: 0 findings`, `EXIT=0`.
+- Claude seal half: `VERDICT: 0 findings`, `EXIT=0`.
+- Outcome: implementation/release content sealed `review_clean` at `764568c`;
+  no accepted debt.
+
+### closure
+
+S0 closed with no accepted debt. The reviewed content commit is `764568c`; the
+planned reviewed tag is `v0.1.1`.
 
 ## Slice 01 Documentation
 
