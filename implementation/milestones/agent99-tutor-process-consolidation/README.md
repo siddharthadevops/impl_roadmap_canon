@@ -1,6 +1,6 @@
 # Agent99/Tutor Process Consolidation
 
-Status: open (skeleton ready)
+Status: open (Slice 01 documentation sealed)
 
 ## Boundary
 
@@ -92,7 +92,7 @@ current common canon.
 
 | Slice | Title | Status | Notes |
 |---|---|---|---|
-| 01 | Local context and support order | planned | Add required local context to Required Local Layout and define local support-order constraints. |
+| 01 | Local context and support order | ready | Add required local context to Required Local Layout and define local support-order constraints. |
 | 02 | Non-canonical planning material | planned | Add brainstorming, `_drafts` implementation guides, review-work, and Adopt / Revise / Reject rules. |
 | 03 | Broad reviewer invocation | planned | Add bypass reviewer commands, no-edit guardrails, egress boundaries, and worktree checks. |
 | 04 | Seal reviewer independence | planned | Add independent seal reviewer selection, fallback handling, and usable-output evidence rules. |
@@ -101,16 +101,16 @@ current common canon.
 
 | Order | Unit | Phase | Status | Review | Commit | Notes |
 |---|---|---|---|---|---|---|
-| 01 | Skeleton | doc | ready | skeleton-doc-r26 + seal-a11 | | Double seal clean; no accepted debt. |
+| 01 | Skeleton | doc | ready | skeleton-doc-r26 + seal-a11 | 6bf839e | Double seal clean; no accepted debt. |
+| 02 | Slice 01 | doc | ready | slice-01-doc-r12 + seal-a3 | | Double seal clean; no accepted debt. |
 
 ## Current Slice
 
-None. Skeleton is sealed. Commit the skeleton before Slice 01 is drafted.
+Slice 01 documentation sealed.
 
 ## Continuation
 
-Commit the sealed S2 skeleton, then draft Slice 01 documentation. For S2 only,
-use the
-operator-authorized broad reviewer invocation deviation with explicit no-edit
-prompt text, relevance-driven egress boundaries, and before/after worktree
-checks.
+Commit the sealed Slice 01 documentation before Slice 01 implementation begins.
+For S2 only, use the operator-authorized broad reviewer invocation deviation
+with explicit no-edit prompt text, relevance-driven egress boundaries, and
+before/after worktree checks.

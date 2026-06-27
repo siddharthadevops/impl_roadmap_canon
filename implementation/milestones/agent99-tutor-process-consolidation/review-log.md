@@ -302,7 +302,142 @@ worktree before/after snapshots.
 
 ## Slice 01 Documentation
 
-Pending.
+### slice-01-doc-r1
+
+Codex review completed with `VERDICT: 2 findings`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+- `F01 [P1]` fixed: support-order/platform-preference constraints now apply to
+  milestone skeletons as well as slice notes, consultations, reviews, and
+  implementation decisions.
+- `F02 [P2]` fixed: the pre-seal gate now blocks changes to any Slice 01
+  expected implementation file until the slice note seals `ready` and is
+  committed.
+
+### slice-01-doc-r2
+
+Codex review completed with `VERDICT: 2 findings`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+- `F01 [P1]` fixed: `canon/process/codex-review.md` is now in scope and tests,
+  so review prompt guidance must load and enforce local context when relevant.
+- `F02 [P2]` fixed: acceptance criteria now require implementation decisions to
+  apply local support-order or platform-preference constraints before proposing
+  new machinery.
+
+### slice-01-doc-r3
+
+Codex review completed with `VERDICT: 2 findings`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+- `F01 [P2]` fixed: the milestone slice table now marks Slice 01 as
+  `review_requested`, matching the active slice note and work log.
+- `F02 [P2]` fixed: the test plan now checks required local-context template
+  sections, the full sensitive-data warning, and this repository's
+  product-neutral/no-support-order local context.
+
+### slice-01-doc-r4
+
+Codex review completed with `VERDICT: 1 finding`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+- `F01 [P2]` fixed: milestone and slice templates are now expected files and
+  tests require them to reference `local-context.md` when authors fill Reuse
+  Posture for new machinery.
+
+### slice-01-doc-r5
+
+Codex review completed with `VERDICT: 1 finding`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+- `F01 [P2]` fixed: tests now target each required surface: Reuse Posture,
+  milestone skeletons, slice notes, consultations, reviews, implementation
+  decisions, and new-machinery proposals.
+
+### slice-01-doc-r6
+
+Codex review completed with `VERDICT: 1 finding`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+- `F01 [P2]` fixed: tests now directly verify the canon-side guard that local
+  context is local constraints, not process authority, and that temporary
+  process deviations remain in `implementation/process/*`.
+
+### slice-01-doc-r7
+
+Codex review completed with `VERDICT: 2 findings`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+- `F01 [P2]` fixed: tests now reject Agent99/Tutor/LPC/Life/Firebase product
+  names in common canon and local-state templates.
+- `F02 [P2]` fixed: tests now check `local-context.md` inside the Required
+  Local Layout block, not merely anywhere in `canon/process/README.md`.
+
+### slice-01-doc-r8
+
+Codex review completed with `VERDICT: 1 finding`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+- `F01 [P2]` fixed: the Required Local Layout test now uses executable awk
+  slash escaping.
+
+### slice-01-doc-r9
+
+Codex review completed with `VERDICT: 1 finding`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+- `F01 [P1]` rejected after Claude CLI adjudication
+  (`slice-01-doc-r9-f01-adjudication`, `EXIT=0`): the local-context template
+  section and no-raw-secrets warning define file shape and data hygiene, not
+  review access, egress, or invocation posture. Slice 03 still owns broad
+  reviewer invocation and egress behavior.
+
+### slice-01-doc-seal-a1
+
+- Codex seal half: `VERDICT: 1 finding`, `EXIT=0`.
+- Claude CLI seal half: `VERDICT: 0 findings`, `EXIT=0`, using
+  `claude -p --model opus --effort max --permission-mode bypassPermissions`.
+- Outcome: seal broken; fixed the Codex finding and returned to the Codex loop.
+- `F01 [P2]` fixed: the Slice 01 work-log row now uses `review_requested` for
+  a pending seal/review state instead of undefined `seal_requested`.
+
+### slice-01-doc-r10
+
+Codex review completed with `VERDICT: 2 findings`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+- `F01 [P2]` fixed: the product-name guard now also covers this repository's
+  required `implementation/local-context.md`.
+- `F02 [P2]` fixed: tests now preserve the current common Codex invocation
+  posture while broad reviewer invocation remains deferred to Slice 03.
+
+### slice-01-doc-r11
+
+Codex review completed with `VERDICT: 0 findings`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+### slice-01-doc-seal-a2
+
+- Codex seal half: `VERDICT: 0 findings`, `EXIT=0`.
+- Claude CLI seal half: `VERDICT: 1 finding`, `EXIT=0`, using
+  `claude -p --model opus --effort max --permission-mode bypassPermissions`.
+- Outcome: seal broken; fixed the Claude finding and returned to the Codex
+  loop.
+- `F01 [P2]` fixed: Reuse Posture now explains that support-order and
+  platform-preference enforcement extends the existing Reuse Gate and Reviews
+  model instead of adding a parallel approval path.
+
+### slice-01-doc-r12
+
+Codex review completed with `VERDICT: 0 findings`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+### slice-01-doc-seal-a3
+
+- Codex seal half: `VERDICT: 0 findings`, `EXIT=0`.
+- Claude CLI seal half: `VERDICT: 0 findings`, `EXIT=0`, using
+  `claude -p --model opus --effort max --permission-mode bypassPermissions`.
+- Outcome: Slice 01 documentation sealed `ready`; no accepted debt.
 
 ## Slice 01 Implementation
 
