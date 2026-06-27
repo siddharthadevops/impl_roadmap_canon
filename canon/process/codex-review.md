@@ -59,6 +59,10 @@ Keep prompts thin. Include:
 - the reuse gate.
 - the local context constraints relevant to the review, including any support
   order or platform preference when the artifact proposes new machinery.
+- any named brainstorming or named `_drafts` material as non-canonical context,
+  checking that the reviewed artifact explicitly records the relevant
+  **Adopt / Revise / Reject** decision instead of approving linked material.
+- for process-doc work, review planning-material mechanism and link wording for brainstorming and `_drafts`; do not review product or architecture content unless the operator names that content as the review artifact.
 - the severity rubric.
 - the no-edit instruction.
 - the rule that reviewer findings are claims, not facts.
@@ -97,4 +101,4 @@ Durable evidence lives in tracked local state:
 - slice debt is recorded in the closure.
 - skeleton or process-doc debt is recorded in the relevant review log.
 
-Scratch evidence is regenerable and should not be committed.
+Scratch evidence is regenerable and should not be committed. `review-work/` must not hold durable architecture material or guide material.

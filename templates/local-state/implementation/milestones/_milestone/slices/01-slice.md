@@ -15,6 +15,12 @@ Status: draft
 - Local context: check `../../../local-context.md` when new machinery is
   proposed.
 
+## Non-Canonical Planning
+
+- Named planning material:
+- Adopt / Revise / Reject:
+- Notes:
+
 ## Expected Files
 
 ## Acceptance Criteria

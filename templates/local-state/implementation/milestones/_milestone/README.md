@@ -25,6 +25,12 @@ Describe the functional outcome this milestone owns.
 
 State the invariant or contract every slice in this milestone must preserve.
 
+## Non-Canonical Planning
+
+- Named planning material:
+- Adopt / Revise / Reject:
+- Notes:
+
 ## Slices
 
 | Slice | Title | Status | Notes |

@@ -33,6 +33,8 @@ implementation/
   README.md
   roadmap.md
   local-context.md  # local constraints read by the canon; not process authority
+  brainstorming/    # non-canonical tracked exploratory planning; may be empty
+  _drafts/          # non-canonical implementation-intent guides; may be empty
   process/
     README.md          # local pointer to this canon, plus temporary deviations if any
     codex-review.md    # local pointer to this canon, plus temporary deviations if any
@@ -44,7 +46,7 @@ implementation/
       review-log.md
       slices/
       closures/
-  review-work/         # git-ignored scratch evidence
+  review-work/         # git-ignored mechanical review scratch evidence
 ```
 
 ## Hierarchy
@@ -77,6 +79,25 @@ Every skeleton and slice note must include a short `Reuse Posture` section:
 - why any new machinery is necessary.
 - how the new path stays compatible with existing contracts.
 - how local context was applied when new machinery is proposed.
+
+## Non-Canonical Planning
+
+`implementation/brainstorming/` holds tracked exploratory product or architecture
+thinking. It is non-canonical planning context: not implementation authority,
+not a canonical dependency, and not a replacement for a reviewed milestone or
+slice artifact.
+
+`implementation/_drafts/` holds non-canonical implementation-intent guides. A
+guide may record direction, sequencing, and risks, but it does not authorize
+implementation and does not override sealed artifacts.
+
+A milestone or slice may use brainstorming or `_drafts` only as non-canonical
+planning context unless its own reviewed artifact explicitly records how it
+will **Adopt / Revise / Reject** the relevant decisions.
+
+`implementation/review-work/` is git-ignored mechanical review scratch for
+prompts, findings, seals, adjudications, and process-gate consultation outputs.
+It must not hold durable architecture material or implementation guide material.
 
 ## Cycle
 

@@ -11,6 +11,8 @@ This repository follows its own pinned-in-place canon:
 - Local process pointer: [`process/README.md`](process/README.md)
 - Local review pointer: [`process/codex-review.md`](process/codex-review.md)
 - Local context: [`local-context.md`](local-context.md)
+- Local planning: [`brainstorming/`](brainstorming/) and
+  [`_drafts/`](_drafts/)
 - Milestone registry and continuation: [`milestones/README.md`](milestones/README.md)
 - Strategic roadmap: [`roadmap.md`](roadmap.md)
 
