@@ -1,6 +1,6 @@
 # Agent99/Tutor Process Consolidation
 
-Status: open (Slice 02 implementation)
+Status: open (Slice 03 documentation)
 
 ## Boundary
 
@@ -93,7 +93,7 @@ current common canon.
 | Slice | Title | Status | Notes |
 |---|---|---|---|
 | 01 | Local context and support order | closed | Add required local context to Required Local Layout and define local support-order constraints. |
-| 02 | Non-canonical planning material | ready | Add brainstorming, `_drafts` implementation guides, review-work, and Adopt / Revise / Reject rules. |
+| 02 | Non-canonical planning material | closed | Add brainstorming, `_drafts` implementation guides, review-work, and Adopt / Revise / Reject rules. |
 | 03 | Broad reviewer invocation | planned | Add bypass reviewer commands, no-edit guardrails, egress boundaries, and worktree checks. |
 | 04 | Seal reviewer independence | planned | Add independent seal reviewer selection, fallback handling, and usable-output evidence rules. |
 
@@ -121,15 +121,18 @@ current common canon.
 | 18 | Slice 02 | doc | fixed | slice-02-doc-r6 | | Added may-remain-empty and layout-role tests. |
 | 19 | Slice 02 | doc | review_requested | slice-02-doc-r7 | | Fresh review launched after r6 fixes. |
 | 20 | Slice 02 | doc | review_requested | slice-02-doc-r7 + seal-a1 | | Codex r7 clean; documentation double seal launched. |
-| 21 | Slice 02 | doc | ready | slice-02-doc-r7 + seal-a1 | | Double seal clean; no accepted debt. |
+| 21 | Slice 02 | doc | ready | slice-02-doc-r7 + seal-a1 | f75a1fd | Double seal clean; no accepted debt. |
+| 22 | Slice 02 | impl | verified | | 70310be | Full Slice 02 test list passed. |
+| 23 | Slice 02 | impl | review_clean | slice-02-impl-r1 + seal-a1 | 70310be | Codex review and double seal clean; no accepted debt. |
+| 24 | Slice 02 | closure | closed | | | Closure/bookkeeping recorded. |
 
 ## Current Slice
 
-Slice 02 implementation.
+Slice 03 documentation.
 
 ## Continuation
 
-Implement sealed Slice 02 non-canonical planning material documentation. For S2
-only, use the operator-authorized broad reviewer invocation deviation with
-explicit no-edit prompt text, relevance-driven egress boundaries, and
-before/after worktree checks.
+Draft the Slice 03 broad reviewer invocation note. For S2 only, use the
+operator-authorized broad reviewer invocation deviation with explicit no-edit
+prompt text, relevance-driven egress boundaries, and before/after worktree
+checks.
