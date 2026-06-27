@@ -468,3 +468,81 @@ worktree before/after snapshots.
 - Claude CLI seal half: `VERDICT: 0 findings`, `EXIT=0`, using
   `claude -p --model opus --effort max --permission-mode bypassPermissions`.
 - Outcome: Slice 01 implementation sealed `review_clean`; no accepted debt.
+
+## Slice 02 Documentation
+
+### slice-02-doc-r1
+
+Codex review completed with `VERDICT: 2 findings`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+- `F01 [P2]` fixed: expected files and tests now include the milestone and
+  slice templates so generated consumers have a standard place to name
+  non-canonical planning material and Adopt / Revise / Reject relevant
+  decisions.
+- `F02 [P2]` fixed: tests now cover `canon/process/codex-review.md` for the
+  review-work boundary, so Saving Output must exclude durable architecture or
+  guide material.
+
+### slice-02-doc-r2
+
+Codex review completed with `VERDICT: 2 findings`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+- `F01 [P2]` fixed: the product-neutrality guard now covers the implementation
+  README files and the milestone/slice templates this slice expects to edit.
+- `F02 [P2]` fixed: prompt-shape tests now separately require named
+  brainstorming and named `_drafts` to be treated as non-canonical context, and
+  still require Adopt / Revise / Reject coverage.
+
+### slice-02-doc-r3
+
+Codex review completed with `VERDICT: 1 finding`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+- `F01 [P2]` fixed: tests now cover the process-doc review boundary for
+  `_drafts` as well as brainstorming, so process-doc reviews must not approve
+  draft guide content unless the operator names that content.
+
+### slice-02-doc-r4
+
+Codex review completed with `VERDICT: 3 findings`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+- `F01 [P2]` fixed: the work log now records the next requested review round
+  so continuation state matches the slice's `review_requested` status.
+- `F02 [P2]` fixed: acceptance and tests now require the common Required Local
+  Layout to list `brainstorming/` and `_drafts/`.
+- `F03 [P2]` fixed: tests now require process-doc review wording to cover
+  mechanism/link-only review and operator-named content before content review.
+
+### slice-02-doc-r5
+
+Codex review completed with `VERDICT: 1 finding`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+- `F01 [P2]` fixed: the `_drafts` prompt-shape test now requires named
+  `_drafts` material to be treated as non-canonical context, instead of
+  passing on any loose `_drafts` and non-canonical mention.
+
+### slice-02-doc-r6
+
+Codex review completed with `VERDICT: 2 findings`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+- `F01 [P2]` fixed: acceptance and tests now require planning-material README
+  files to say the directories may remain empty.
+- `F02 [P2]` fixed: Required Local Layout tests now require the non-canonical
+  role in the layout block for both `brainstorming/` and `_drafts/`.
+
+### slice-02-doc-r7
+
+Codex review completed with `VERDICT: 0 findings`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+### slice-02-doc-seal-a1
+
+- Codex seal half: `VERDICT: 0 findings`, `EXIT=0`.
+- Claude CLI seal half: `VERDICT: 0 findings`, `EXIT=0`, using
+  `claude -p --model opus --effort max --permission-mode bypassPermissions`.
+- Outcome: Slice 02 documentation sealed `ready`; no accepted debt.

@@ -1,6 +1,6 @@
 # Agent99/Tutor Process Consolidation
 
-Status: open (Slice 02 documentation)
+Status: open (Slice 02 implementation)
 
 ## Boundary
 
@@ -93,7 +93,7 @@ current common canon.
 | Slice | Title | Status | Notes |
 |---|---|---|---|
 | 01 | Local context and support order | closed | Add required local context to Required Local Layout and define local support-order constraints. |
-| 02 | Non-canonical planning material | planned | Add brainstorming, `_drafts` implementation guides, review-work, and Adopt / Revise / Reject rules. |
+| 02 | Non-canonical planning material | ready | Add brainstorming, `_drafts` implementation guides, review-work, and Adopt / Revise / Reject rules. |
 | 03 | Broad reviewer invocation | planned | Add bypass reviewer commands, no-edit guardrails, egress boundaries, and worktree checks. |
 | 04 | Seal reviewer independence | planned | Add independent seal reviewer selection, fallback handling, and usable-output evidence rules. |
 
@@ -105,14 +105,31 @@ current common canon.
 | 02 | Slice 01 | doc | ready | slice-01-doc-r12 + seal-a3 | 3a058d1 | Double seal clean; no accepted debt. |
 | 03 | Slice 01 | impl | review_clean | slice-01-impl-r2 + seal-a2 | 5039353 | Fixed seal-a1 P3 clarity finding; no accepted debt. |
 | 04 | Slice 01 | closure | closed | | | Closure/bookkeeping recorded. |
+| 05 | Slice 02 | doc | findings | slice-02-doc-r1 | | 2 P2 findings; both valid. |
+| 06 | Slice 02 | doc | fixed | slice-02-doc-r1 | | Added template Adopt/Revise/Reject coverage and codex-review review-work tests; fresh review due. |
+| 07 | Slice 02 | doc | findings | slice-02-doc-r2 | | 2 P2 findings; both valid. |
+| 08 | Slice 02 | doc | fixed | slice-02-doc-r2 | | Expanded product-neutrality and prompt-shape tests; fresh review due. |
+| 09 | Slice 02 | doc | findings | slice-02-doc-r3 | | 1 P2 finding; valid. |
+| 10 | Slice 02 | doc | fixed | slice-02-doc-r3 | | Added `_drafts` process-doc boundary test; fresh review due. |
+| 11 | Slice 02 | doc | findings | slice-02-doc-r4 | | 3 P2 findings; all valid. |
+| 12 | Slice 02 | doc | fixed | slice-02-doc-r4 | | Added Required Local Layout and process-doc boundary tests. |
+| 13 | Slice 02 | doc | review_requested | slice-02-doc-r5 | | Fresh review launched after r4 fixes. |
+| 14 | Slice 02 | doc | findings | slice-02-doc-r5 | | 1 P2 finding; valid. |
+| 15 | Slice 02 | doc | fixed | slice-02-doc-r5 | | Tightened `_drafts` non-canonical-context prompt-shape test. |
+| 16 | Slice 02 | doc | review_requested | slice-02-doc-r6 | | Fresh review launched after r5 fix. |
+| 17 | Slice 02 | doc | findings | slice-02-doc-r6 | | 2 P2 findings; both valid. |
+| 18 | Slice 02 | doc | fixed | slice-02-doc-r6 | | Added may-remain-empty and layout-role tests. |
+| 19 | Slice 02 | doc | review_requested | slice-02-doc-r7 | | Fresh review launched after r6 fixes. |
+| 20 | Slice 02 | doc | review_requested | slice-02-doc-r7 + seal-a1 | | Codex r7 clean; documentation double seal launched. |
+| 21 | Slice 02 | doc | ready | slice-02-doc-r7 + seal-a1 | | Double seal clean; no accepted debt. |
 
 ## Current Slice
 
-Slice 02 documentation.
+Slice 02 implementation.
 
 ## Continuation
 
-Draft Slice 02 documentation for non-canonical planning material. For S2 only,
-use the operator-authorized broad reviewer invocation deviation with explicit
-no-edit prompt text, relevance-driven egress boundaries, and before/after
-worktree checks.
+Implement sealed Slice 02 non-canonical planning material documentation. For S2
+only, use the operator-authorized broad reviewer invocation deviation with
+explicit no-edit prompt text, relevance-driven egress boundaries, and
+before/after worktree checks.
