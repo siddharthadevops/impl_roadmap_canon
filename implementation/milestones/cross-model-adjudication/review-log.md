@@ -159,4 +159,56 @@ Codex review completed with `VERDICT: 0 findings`, `EXIT=0`.
 
 ## Slice 01 Implementation
 
-Pending.
+### slice-01-impl-r1
+
+Codex review completed with `VERDICT: 0 findings`, `EXIT=0`.
+
+### slice-01-impl-seal-a1
+
+- Codex seal half: `VERDICT: 0 findings`, `EXIT=0`.
+- Claude seal half: `VERDICT: 2 findings`, `EXIT=0`.
+- Outcome: seal broken; fixed both findings and returned to the Codex loop.
+- `F01 [P2]` fixed: the review triage summary now includes blocked/operator
+  outcomes.
+- `F02 [P3]` fixed: repeated "reviewer findings are claims" wording was
+  removed.
+
+### slice-01-impl-r2
+
+Codex review completed with `VERDICT: 0 findings`, `EXIT=0`.
+
+### slice-01-impl-seal-a2
+
+- Codex seal half: `VERDICT: 0 findings`, `EXIT=0`.
+- Claude seal half: `VERDICT: 1 finding`, `EXIT=0`.
+- Outcome: seal broken; fixed the finding and returned to the Codex loop.
+- `F01 [P3]` fixed: the long finding-verification line was wrapped for
+  readability.
+
+### slice-01-impl-r3
+
+Codex review completed with `VERDICT: 0 findings`, `EXIT=0`.
+
+### slice-01-impl-seal-a3
+
+- Codex seal half: `VERDICT: 0 findings`, `EXIT=0`.
+- Claude seal half: `VERDICT: 1 finding`, `EXIT=0`.
+- Outcome: seal broken; fixed the finding and returned to the Codex loop.
+- `F01 [P3]` fixed: the evidence sentence was split without changing the
+  required phrase checked by tests.
+
+### slice-01-impl-r4
+
+Codex review completed with `VERDICT: 0 findings`, `EXIT=0`.
+
+### slice-01-impl-seal-a4
+
+- Codex seal half: `VERDICT: 0 findings`, `EXIT=0`.
+- Claude seal half: `VERDICT: 0 findings`, `EXIT=0`.
+- Outcome: implementation/release content sealed `review_clean` at `a6fe5d4`;
+  no accepted debt.
+
+### closure
+
+S1 closed with no accepted debt. The reviewed content commit is `a6fe5d4`; the
+planned reviewed tag is `v0.2.0`.

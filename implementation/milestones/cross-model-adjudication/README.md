@@ -1,6 +1,6 @@
 # Cross-Model Adjudication And Finding Verification
 
-Status: open (skeleton sealed `ready`)
+Status: closed
 
 ## Boundary
 
@@ -39,7 +39,7 @@ resolution remains.
 
 | Slice | Title | Status | Notes |
 |---|---|---|---|
-| 01 | Consultation and adjudication protocol | ready | Amend canon docs and templates; publish reviewed tag. |
+| 01 | Consultation and adjudication protocol | closed | Amended canon docs; publish reviewed tag `v0.2.0`. |
 
 ## Work Log
 
@@ -47,12 +47,14 @@ resolution remains.
 |---|---|---|---|---|---|
 | Skeleton | doc | ready | doc-r6 + seal-a5 Codex/Claude | | Double seal clean; no accepted debt. |
 | 01 | doc | ready | doc-r10 + seal-a1 Codex/Claude | 585fcd3 | Double seal clean; no accepted debt. |
+| 01 | impl | review_clean | impl-r4 + seal-a4 Codex/Claude | a6fe5d4 | Release content reviewed; no accepted debt. |
+| 01 | closure | closed | | | Closure/bookkeeping for reviewed tag `v0.2.0`. |
 
 ## Current Slice
 
-Slice 01 - Consultation and adjudication protocol.
+None. S1 is closed.
 
 ## Continuation
 
-Continue with Slice 01 implementation. Apply only the approved canon,
-version, and pinning changes, then review the content commit.
+S1 is closed. Continue by reading the global milestone index and roadmap before
+opening any future canon change.

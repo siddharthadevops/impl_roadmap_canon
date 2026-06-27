@@ -15,10 +15,8 @@ Delivery follows the local canon:
 | Roadmap | Milestone | Area | Status | Layout | Source |
 |---|---|---|---|---|---|
 | S0 | Self-canon bootstrap review | Canon bootstrap | Closed (reviewed release `v0.1.1`) | Process layout | [README](self-canon-bootstrap-review/README.md) |
-| S1 | Cross-model adjudication and finding verification | Process canon | Open (skeleton sealed `ready`) | Process layout | [README](cross-model-adjudication/README.md) |
+| S1 | Cross-model adjudication and finding verification | Process canon | Closed (reviewed release `v0.2.0`) | Process layout | [README](cross-model-adjudication/README.md) |
 
 ## Active Continuation
 
-**S1 (`cross-model-adjudication`) is open.** Continue from its milestone
-README. The current unit is `Slice 01 - Consultation and adjudication protocol`
-implementation review.
+No active milestone. Read the roadmap before opening the next canon change.

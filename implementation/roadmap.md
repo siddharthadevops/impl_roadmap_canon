@@ -13,14 +13,14 @@ repository under its own process by adding local state, reviewing the initial
 canon and templates, fixing findings, and publishing `v0.1.1` as the first
 reviewed release.
 
-S1 opens a process-canon amendment to make the doubt, disagreement,
-cross-model consultation, adjudication, and finding-verification protocol
-explicit.
+S1 made the doubt, disagreement, cross-model consultation, adjudication, and
+finding-verification protocol explicit, and publishes it as reviewed release
+`v0.2.0`.
 
 ## Next Direction
 
-Close S1, then publish the next reviewed tag for consuming product repositories.
-Open future canon changes as new milestones.
+Open future canon changes as new milestones. Keep consuming product
+repositories pinned to reviewed tags.
 
 ## Non-Goals
 
