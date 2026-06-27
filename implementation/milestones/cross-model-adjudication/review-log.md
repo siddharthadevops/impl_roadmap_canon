@@ -73,7 +73,89 @@ Codex review completed with `VERDICT: 0 findings`, `EXIT=0`.
 
 ## Slice 01 Documentation
 
-Pending.
+### slice-01-doc-r1
+
+Codex review completed with `VERDICT: 2 findings`, `EXIT=0`.
+
+- `F01 [P1]` fixed: acceptance criteria now require stopping for the operator
+  when cross-family discussion is unavailable or unresolved.
+- `F02 [P2]` fixed: tests now assert README pinning, `v0.1.1` local/remote tag
+  immutability, and `v0.2.0:VERSION`.
+
+### slice-01-doc-r2
+
+Codex review completed with `VERDICT: 2 findings`, `EXIT=0`.
+
+- `F01 [P1]` fixed: closure now records the reviewed content commit and
+  planned tag instead of a not-yet-existing final release commit.
+- `F02 [P1]` fixed: tests now assert each required canon phrase separately.
+
+### slice-01-doc-r3
+
+Codex review completed with `VERDICT: 2 findings`, `EXIT=0`.
+
+- `F01 [P1]` fixed: acceptance criteria now require direct verification against
+  files, diffs, tests, or commands and forbid memory/chat triage without direct
+  artifact evidence.
+- `F02 [P2]` fixed: tests now check `canon/process/codex-review.md`.
+
+### slice-01-doc-r4
+
+Codex review completed with `VERDICT: 2 findings`, `EXIT=0`.
+
+- `F01 [P2]` fixed: `canon/process/codex-review.md` tests are now separate
+  checks for evidence verification, claim status, and cross-family discussion.
+- `F02 [P2]` fixed: tests now assert the same-family sub-agent case.
+
+### slice-01-doc-r5
+
+Codex review completed with `VERDICT: 0 findings`, `EXIT=0`.
+
+### slice-01-doc-r6
+
+Codex review completed with `VERDICT: 2 findings`, `EXIT=0`.
+
+- `F01 [P1]` fixed: release sequence now requires continuation/work-log
+  bookkeeping after the sealed slice note commit and before canon changes.
+- `F02 [P2]` fixed: tests are split into pre-tag and post-tag checks.
+
+### slice-01-doc-r7
+
+Codex review completed with `VERDICT: 2 findings`, `EXIT=0`.
+
+- `F01 [P1]` fixed: operator escalation test now checks stop-and-consult
+  wording rather than broad `operator` text.
+- `F02 [P2]` fixed: slice scope now checks template compatibility and records
+  template file changes as a non-goal unless review proves they are needed.
+
+### slice-01-doc-r8
+
+Codex review completed with `VERDICT: 2 findings`, `EXIT=0`.
+
+- `F01 [P2]` fixed: `codex-review.md` tests now assert same-family sub-agent
+  and stop-for-operator guidance.
+- `F02 [P2]` fixed: acceptance criteria and tests now require template
+  compatibility checks.
+
+### slice-01-doc-r9
+
+Codex review completed with `VERDICT: 2 findings`, `EXIT=0`.
+
+- `F01 [P1]` fixed: acceptance criteria and release sequence now require S1
+  implementation finding triage to follow the new protocol before closure.
+- `F02 [P2]` fixed: README tests now assert the positive verification basis
+  phrase `files, diffs, tests, or commands`.
+
+### slice-01-doc-r10
+
+Codex review completed with `VERDICT: 0 findings`, `EXIT=0`.
+
+### slice-01-doc-seal-a1
+
+- Codex seal half: `VERDICT: 0 findings`, `EXIT=0`.
+- Claude seal half: `VERDICT: 0 findings`, `EXIT=0`.
+- Outcome: slice documentation sealed `ready`; committed as `585fcd3`; no
+  accepted debt.
 
 ## Slice 01 Implementation
 

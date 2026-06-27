@@ -20,4 +20,5 @@ Delivery follows the local canon:
 ## Active Continuation
 
 **S1 (`cross-model-adjudication`) is open.** Continue from its milestone
-README. The sealed skeleton must be committed before Slice 01 is drafted.
+README. The current unit is `Slice 01 - Consultation and adjudication protocol`
+implementation review.

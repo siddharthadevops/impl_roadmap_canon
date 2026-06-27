@@ -39,18 +39,20 @@ resolution remains.
 
 | Slice | Title | Status | Notes |
 |---|---|---|---|
-| 01 | Consultation and adjudication protocol | planned | Amend canon docs and templates; publish reviewed tag. |
+| 01 | Consultation and adjudication protocol | ready | Amend canon docs and templates; publish reviewed tag. |
 
 ## Work Log
 
 | Unit | Phase | Status | Review | Commit | Notes |
 |---|---|---|---|---|---|
 | Skeleton | doc | ready | doc-r6 + seal-a5 Codex/Claude | | Double seal clean; no accepted debt. |
+| 01 | doc | ready | doc-r10 + seal-a1 Codex/Claude | 585fcd3 | Double seal clean; no accepted debt. |
 
 ## Current Slice
 
-None. Skeleton is sealed; Slice 01 is not drafted yet.
+Slice 01 - Consultation and adjudication protocol.
 
 ## Continuation
 
-Commit the sealed skeleton before drafting and reviewing Slice 01.
+Continue with Slice 01 implementation. Apply only the approved canon,
+version, and pinning changes, then review the content commit.
