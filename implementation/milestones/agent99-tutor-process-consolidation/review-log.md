@@ -441,4 +441,30 @@ worktree before/after snapshots.
 
 ## Slice 01 Implementation
 
-Pending.
+### slice-01-impl-r1
+
+Codex review completed with `VERDICT: 0 findings`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+### slice-01-impl-seal-a1
+
+- Codex seal half: `VERDICT: 0 findings`, `EXIT=0`.
+- Claude CLI seal half: `VERDICT: 1 finding`, `EXIT=0`, using
+  `claude -p --model opus --effort max --permission-mode bypassPermissions`.
+- Outcome: seal broken; fixed the Claude finding and returned to the Codex
+  loop.
+- `F01 [P3]` fixed: the Reuse Gate now separates artifacts that propose new
+  machinery from reviews that check local-context constraints on reviewed
+  artifacts.
+
+### slice-01-impl-r2
+
+Codex review completed with `VERDICT: 0 findings`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+### slice-01-impl-seal-a2
+
+- Codex seal half: `VERDICT: 0 findings`, `EXIT=0`.
+- Claude CLI seal half: `VERDICT: 0 findings`, `EXIT=0`, using
+  `claude -p --model opus --effort max --permission-mode bypassPermissions`.
+- Outcome: Slice 01 implementation sealed `review_clean`; no accepted debt.

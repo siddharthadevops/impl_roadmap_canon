@@ -1,6 +1,6 @@
 # Agent99/Tutor Process Consolidation
 
-Status: open (Slice 01 implementation)
+Status: open (Slice 02 documentation)
 
 ## Boundary
 
@@ -92,7 +92,7 @@ current common canon.
 
 | Slice | Title | Status | Notes |
 |---|---|---|---|
-| 01 | Local context and support order | ready | Add required local context to Required Local Layout and define local support-order constraints. |
+| 01 | Local context and support order | closed | Add required local context to Required Local Layout and define local support-order constraints. |
 | 02 | Non-canonical planning material | planned | Add brainstorming, `_drafts` implementation guides, review-work, and Adopt / Revise / Reject rules. |
 | 03 | Broad reviewer invocation | planned | Add bypass reviewer commands, no-edit guardrails, egress boundaries, and worktree checks. |
 | 04 | Seal reviewer independence | planned | Add independent seal reviewer selection, fallback handling, and usable-output evidence rules. |
@@ -103,14 +103,16 @@ current common canon.
 |---|---|---|---|---|---|---|
 | 01 | Skeleton | doc | ready | skeleton-doc-r26 + seal-a11 | 6bf839e | Double seal clean; no accepted debt. |
 | 02 | Slice 01 | doc | ready | slice-01-doc-r12 + seal-a3 | 3a058d1 | Double seal clean; no accepted debt. |
+| 03 | Slice 01 | impl | review_clean | slice-01-impl-r2 + seal-a2 | 5039353 | Fixed seal-a1 P3 clarity finding; no accepted debt. |
+| 04 | Slice 01 | closure | closed | | | Closure/bookkeeping recorded. |
 
 ## Current Slice
 
-Slice 01 implementation.
+Slice 02 documentation.
 
 ## Continuation
 
-Begin Slice 01 implementation from the sealed slice note. For S2 only, use the
-operator-authorized broad reviewer invocation deviation with explicit no-edit
-prompt text, relevance-driven egress boundaries, and before/after worktree
-checks.
+Draft Slice 02 documentation for non-canonical planning material. For S2 only,
+use the operator-authorized broad reviewer invocation deviation with explicit
+no-edit prompt text, relevance-driven egress boundaries, and before/after
+worktree checks.
