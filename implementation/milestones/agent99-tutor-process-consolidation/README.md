@@ -1,6 +1,6 @@
 # Agent99/Tutor Process Consolidation
 
-Status: open (Slice 03 implementation)
+Status: open (Slice 03 implementation review)
 
 ## Boundary
 
@@ -170,14 +170,12 @@ current common canon.
 | 67 | Slice 03 | doc | review_requested | slice-03-doc-r14 | | Fresh review due after r13 fix. |
 | 68 | Slice 03 | doc | review_requested | slice-03-doc-r14 + seal-a6 | | Codex r14 clean; documentation double seal launched. |
 | 69 | Slice 03 | doc | ready | slice-03-doc-r14 + seal-a6 | | Double seal clean; no accepted debt. |
+| 70 | Slice 03 | impl | verified | | | Full Slice 03 test list passed. |
 
 ## Current Slice
 
-Slice 03 implementation.
+Slice 03 implementation review.
 
 ## Continuation
 
-Implement sealed Slice 03 broad reviewer invocation documentation. For S2 only,
-use the operator-authorized broad reviewer invocation deviation until the common
-rule is implemented, with explicit no-edit prompt text, relevance-driven egress
-boundaries, and before/after worktree checks.
+Run Slice 03 implementation review against the implementation commit.
