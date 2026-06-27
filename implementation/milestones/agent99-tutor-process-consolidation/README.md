@@ -1,6 +1,6 @@
 # Agent99/Tutor Process Consolidation
 
-Status: open (Slice 01 documentation sealed)
+Status: open (Slice 01 implementation)
 
 ## Boundary
 
@@ -102,15 +102,15 @@ current common canon.
 | Order | Unit | Phase | Status | Review | Commit | Notes |
 |---|---|---|---|---|---|---|
 | 01 | Skeleton | doc | ready | skeleton-doc-r26 + seal-a11 | 6bf839e | Double seal clean; no accepted debt. |
-| 02 | Slice 01 | doc | ready | slice-01-doc-r12 + seal-a3 | | Double seal clean; no accepted debt. |
+| 02 | Slice 01 | doc | ready | slice-01-doc-r12 + seal-a3 | 3a058d1 | Double seal clean; no accepted debt. |
 
 ## Current Slice
 
-Slice 01 documentation sealed.
+Slice 01 implementation.
 
 ## Continuation
 
-Commit the sealed Slice 01 documentation before Slice 01 implementation begins.
-For S2 only, use the operator-authorized broad reviewer invocation deviation
-with explicit no-edit prompt text, relevance-driven egress boundaries, and
-before/after worktree checks.
+Begin Slice 01 implementation from the sealed slice note. For S2 only, use the
+operator-authorized broad reviewer invocation deviation with explicit no-edit
+prompt text, relevance-driven egress boundaries, and before/after worktree
+checks.
