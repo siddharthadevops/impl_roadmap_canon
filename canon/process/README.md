@@ -32,6 +32,7 @@ The consuming project owns local state:
 implementation/
   README.md
   roadmap.md
+  local-context.md  # local constraints read by the canon; not process authority
   process/
     README.md          # local pointer to this canon, plus temporary deviations if any
     codex-review.md    # local pointer to this canon, plus temporary deviations if any
@@ -61,12 +62,21 @@ first check existing project code, existing project contracts, pinned shared
 dependencies, and already-approved platform surfaces. Prefer reuse, extension,
 wrapping, parameterization, or documentation over parallel machinery.
 
+The local context file records local constraints, not process authority.
+Recorded temporary process deviations remain in `implementation/process/README.md` or `implementation/process/codex-review.md`.
+Reuse Posture must explain how local context was applied when new machinery is
+proposed.
+
+The canon requires milestone skeletons, slice notes, consultations, and implementation decisions to apply local context support order or platform preference constraints before proposing new machinery.
+The canon requires reviews to check local context support order or platform preference constraints when the reviewed artifact proposes new machinery.
+
 Every skeleton and slice note must include a short `Reuse Posture` section:
 
 - what was checked.
 - what is reused or extended.
 - why any new machinery is necessary.
 - how the new path stays compatible with existing contracts.
+- how local context was applied when new machinery is proposed.
 
 ## Cycle
 

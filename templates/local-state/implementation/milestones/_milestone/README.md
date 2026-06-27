@@ -19,6 +19,7 @@ Describe the functional outcome this milestone owns.
 - Reused or extended:
 - New machinery, if any:
 - Compatibility:
+- Local context: check `../../local-context.md` when new machinery is proposed.
 
 ## Shared Contract
 
@@ -44,4 +45,3 @@ None until the skeleton is sealed `ready`.
 
 Continue from the current slice above. If no slice is current, open the next
 slice only after the skeleton is sealed.
-

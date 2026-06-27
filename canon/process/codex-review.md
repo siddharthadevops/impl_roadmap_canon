@@ -14,9 +14,7 @@ Default runner:
 codex exec --sandbox read-only --output-last-message /path/to/last-message.txt - < /path/to/review-prompt.txt
 ```
 
-The reviewer must not edit files. If a local project temporarily needs broader
-filesystem access for reviews, record that deviation in local state and keep the
-same no-edit instruction plus a before/after worktree check.
+The reviewer must not edit files. If a local project temporarily needs broader filesystem access for reviews, record that deviation in local state and keep the same no-edit instruction plus a before/after worktree check.
 
 ## Watchdog
 
@@ -59,6 +57,8 @@ Keep prompts thin. Include:
 - the phase: skeleton, slice documentation, implementation, or process-doc.
 - the canonical references the artifact depends on.
 - the reuse gate.
+- the local context constraints relevant to the review, including any support
+  order or platform preference when the artifact proposes new machinery.
 - the severity rubric.
 - the no-edit instruction.
 - the rule that reviewer findings are claims, not facts.

@@ -12,6 +12,8 @@ Status: draft
 - Reused or extended:
 - New machinery, if any:
 - Compatibility:
+- Local context: check `../../../local-context.md` when new machinery is
+  proposed.
 
 ## Expected Files
 
@@ -24,4 +26,3 @@ Status: draft
 ## Review
 
 This slice note must seal `ready` before production implementation begins.
-
