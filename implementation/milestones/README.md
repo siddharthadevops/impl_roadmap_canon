@@ -20,4 +20,4 @@ Delivery follows the local canon:
 
 **S0 (`self-canon-bootstrap-review`) is open.** Continue from its milestone
 README. The current unit is `Slice 01 - Bootstrap review and reviewed release`
-documentation review.
+implementation/release review.

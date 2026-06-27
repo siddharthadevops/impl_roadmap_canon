@@ -35,14 +35,14 @@ the consuming repository.
 
 | Slice | Title | Status | Notes |
 |---|---|---|---|
-| 01 | Bootstrap review and reviewed release | draft | Review existing canon + templates, fix findings, tag reviewed release. |
+| 01 | Bootstrap review and reviewed release | ready | Review existing canon + templates, fix findings, tag reviewed release. |
 
 ## Work Log
 
 | Unit | Phase | Status | Review | Commit | Notes |
 |---|---|---|---|---|---|
 | Skeleton | doc | ready | doc-r2 + seal-a1 Codex/Claude | | Double seal clean; no accepted debt. |
-| 01 | doc | draft | | | Slice note is current for documentation review. |
+| 01 | doc | ready | doc-r12 + seal-a3 Codex/Claude | ae6454c | Double seal clean; no accepted debt. |
 
 ## Current Slice
 
@@ -50,6 +50,5 @@ Slice 01 - Bootstrap review and reviewed release.
 
 ## Continuation
 
-Continue with the Slice 01 documentation review. After the slice note seals
-`ready`, review and fix the bootstrap content, then close S0 with a reviewed
-release tag.
+Continue with Slice 01 implementation/release review. Review and fix the
+bootstrap content, then close S0 with a reviewed release tag.
