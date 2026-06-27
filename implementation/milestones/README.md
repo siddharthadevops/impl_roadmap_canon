@@ -15,8 +15,9 @@ Delivery follows the local canon:
 | Roadmap | Milestone | Area | Status | Layout | Source |
 |---|---|---|---|---|---|
 | S0 | Self-canon bootstrap review | Canon bootstrap | Closed (reviewed release `v0.1.1`) | Process layout | [README](self-canon-bootstrap-review/README.md) |
+| S1 | Cross-model adjudication and finding verification | Process canon | Open (skeleton sealed `ready`) | Process layout | [README](cross-model-adjudication/README.md) |
 
 ## Active Continuation
 
-No milestone is open. Continue by reading `../roadmap.md` before opening the
-next canon change.
+**S1 (`cross-model-adjudication`) is open.** Continue from its milestone
+README. The sealed skeleton must be committed before Slice 01 is drafted.

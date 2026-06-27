@@ -10,13 +10,17 @@ local.
 
 `v0.1.0` exists as the initial unreviewed bootstrap release. S0 brought this
 repository under its own process by adding local state, reviewing the initial
-canon and templates, fixing findings, and preparing `v0.1.1` as the first
+canon and templates, fixing findings, and publishing `v0.1.1` as the first
 reviewed release.
+
+S1 opens a process-canon amendment to make the doubt, disagreement,
+cross-model consultation, adjudication, and finding-verification protocol
+explicit.
 
 ## Next Direction
 
-Use reviewed tags for consuming product repositories. Open future canon changes
-as new milestones.
+Close S1, then publish the next reviewed tag for consuming product repositories.
+Open future canon changes as new milestones.
 
 ## Non-Goals
 
