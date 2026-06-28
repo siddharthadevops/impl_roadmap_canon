@@ -1,6 +1,6 @@
 # Agent99/Tutor Process Consolidation
 
-Status: open (Slice 04 implementation)
+Status: closed
 
 ## Boundary
 
@@ -95,7 +95,7 @@ current common canon.
 | 01 | Local context and support order | closed | Add required local context to Required Local Layout and define local support-order constraints. |
 | 02 | Non-canonical planning material | closed | Add brainstorming, `_drafts` implementation guides, review-work, and Adopt / Revise / Reject rules. |
 | 03 | Broad reviewer invocation | closed | Add bypass reviewer commands, no-edit guardrails, egress boundaries, and worktree checks. |
-| 04 | Seal reviewer independence | ready | Add independent seal reviewer selection, fallback handling, and usable-output evidence rules. |
+| 04 | Seal reviewer independence | closed | Add independent seal reviewer selection, fallback handling, and usable-output evidence rules. |
 
 ## Work Log
 
@@ -204,11 +204,17 @@ current common canon.
 | 101 | Slice 04 | doc | fixed | slice-04-doc-seal-a7 | | Updated review-log traceability through a7 and tightened restricted-mode tests. |
 | 102 | Slice 04 | doc | review_requested | slice-04-doc-r20 | | Fresh review due after seal-a7 fixes. |
 | 103 | Slice 04 | doc | ready | slice-04-doc-r20 + seal-a8 | | Double seal clean; no accepted debt. |
+| 104 | Slice 04 | impl | verified | | eef6daa | Slice 04 content checks passed. |
+| 105 | Slice 04 | impl | fixed | slice-04-impl-seal-a1 | | Fixed two valid Claude findings: repetition and ambiguous no-peek wording. |
+| 106 | Slice 04 | impl | fixed | slice-04-impl-seal-a2 | | Fixed one valid Claude P3 finding by single-sourcing fallback mechanics in `codex-review.md`. |
+| 107 | Slice 04 | impl | review_clean | slice-04-impl-r3 + seal-a3 | eef6daa | Codex review and double seal clean; no accepted debt. |
+| 108 | Slice 04 | closure | closed | | | Closure/bookkeeping recorded. |
 
 ## Current Slice
 
-Slice 04 implementation.
+None. S2 is closed.
 
 ## Continuation
 
-Implement Slice 04 from the sealed slice note, then run implementation review.
+S2 is closed. Continue by reading the global milestone index and roadmap before
+opening any future canon change.

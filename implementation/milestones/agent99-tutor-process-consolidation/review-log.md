@@ -994,3 +994,48 @@ worktree before/after snapshots.
 - Claude CLI seal half: `VERDICT: 0 findings`, `EXIT=0`, using
   `claude -p --model opus --effort max --permission-mode bypassPermissions`.
 - Outcome: Slice 04 documentation sealed `ready`; no accepted debt.
+
+## Slice 04 Implementation
+
+### slice-04-impl-r1
+
+Codex review completed with `VERDICT: 0 findings`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+### slice-04-impl-seal-a1
+
+- Codex seal half: `VERDICT: 0 findings`, `EXIT=0`.
+- Claude CLI seal half: `VERDICT: 2 findings`, `EXIT=0`, using
+  `claude -p --model opus --effort max --permission-mode bypassPermissions`.
+- Outcome: seal broken; fixed both findings and returned to the Codex loop.
+- Claude `F01 [P2]` fixed: usable-output and fallback evidence rules were
+  compacted to remove repetition.
+- Claude `F02 [P3]` fixed: README no-peek wording now says the other half's
+  output.
+
+### slice-04-impl-r2
+
+Codex review completed with `VERDICT: 0 findings`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+### slice-04-impl-seal-a2
+
+- Codex seal half: `VERDICT: 0 findings`, `EXIT=0`.
+- Claude CLI seal half: `VERDICT: 1 finding`, `EXIT=0`, using
+  `claude -p --model opus --effort max --permission-mode bypassPermissions`.
+- Outcome: seal broken; fixed the finding and returned to the Codex loop.
+- Claude `F01 [P3]` fixed: fallback mechanics and record fields now live in
+  `codex-review.md`, with the README keeping only the high-level invariant and
+  cross-reference.
+
+### slice-04-impl-r3
+
+Codex review completed with `VERDICT: 0 findings`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+### slice-04-impl-seal-a3
+
+- Codex seal half: `VERDICT: 0 findings`, `EXIT=0`.
+- Claude CLI seal half: `VERDICT: 0 findings`, `EXIT=0`, using
+  `claude -p --model opus --effort max --permission-mode bypassPermissions`.
+- Outcome: Slice 04 implementation sealed `review_clean`; no accepted debt.
