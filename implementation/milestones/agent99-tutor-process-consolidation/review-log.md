@@ -732,3 +732,38 @@ worktree before/after snapshots.
 - Claude CLI seal half: `VERDICT: 0 findings`, `EXIT=0`, using
   `claude -p --model opus --effort max --permission-mode bypassPermissions`.
 - Outcome: Slice 03 documentation sealed `ready`; no accepted debt.
+
+## Slice 03 Implementation
+
+### slice-03-impl-r1
+
+Codex review completed with `VERDICT: 1 finding`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+- Codex `F01 [P2]` rejected after Claude consultation: the cited temporary
+  broad/bypass deviation wording remains only in historical sealed skeleton
+  sections, while active state and local deviation state were cleaned by the
+  implementation. Rewriting sealed skeleton history would require an explicit
+  reopen.
+
+### slice-03-impl-seal-a1
+
+- Codex seal half: `VERDICT: 0 findings`, `EXIT=0`.
+- Claude CLI seal half: `VERDICT: 1 finding`, `EXIT=0`, using
+  `claude -p --model opus --effort max --permission-mode bypassPermissions`.
+- Outcome: seal broken; fixed the valid finding and returned to the Codex
+  loop.
+- Claude `F01 [P3]` fixed: the new Egress prose was rewrapped to match the
+  file's existing line-width style without splitting tested literal phrases.
+
+### slice-03-impl-r2
+
+Codex review completed with `VERDICT: 0 findings`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+### slice-03-impl-seal-a2
+
+- Codex seal half: `VERDICT: 0 findings`, `EXIT=0`.
+- Claude CLI seal half: `VERDICT: 0 findings`, `EXIT=0`, using
+  `claude -p --model opus --effort max --permission-mode bypassPermissions`.
+- Outcome: Slice 03 implementation sealed `review_clean`; no accepted debt.

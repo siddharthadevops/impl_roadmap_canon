@@ -1,6 +1,6 @@
 # Agent99/Tutor Process Consolidation
 
-Status: open (Slice 03 implementation review)
+Status: open (Slice 04 documentation)
 
 ## Boundary
 
@@ -94,7 +94,7 @@ current common canon.
 |---|---|---|---|
 | 01 | Local context and support order | closed | Add required local context to Required Local Layout and define local support-order constraints. |
 | 02 | Non-canonical planning material | closed | Add brainstorming, `_drafts` implementation guides, review-work, and Adopt / Revise / Reject rules. |
-| 03 | Broad reviewer invocation | ready | Add bypass reviewer commands, no-edit guardrails, egress boundaries, and worktree checks. |
+| 03 | Broad reviewer invocation | closed | Add bypass reviewer commands, no-edit guardrails, egress boundaries, and worktree checks. |
 | 04 | Seal reviewer independence | planned | Add independent seal reviewer selection, fallback handling, and usable-output evidence rules. |
 
 ## Work Log
@@ -170,12 +170,16 @@ current common canon.
 | 67 | Slice 03 | doc | review_requested | slice-03-doc-r14 | | Fresh review due after r13 fix. |
 | 68 | Slice 03 | doc | review_requested | slice-03-doc-r14 + seal-a6 | | Codex r14 clean; documentation double seal launched. |
 | 69 | Slice 03 | doc | ready | slice-03-doc-r14 + seal-a6 | | Double seal clean; no accepted debt. |
-| 70 | Slice 03 | impl | verified | | | Full Slice 03 test list passed. |
+| 70 | Slice 03 | impl | verified | | 5c77118 | Full Slice 03 test list passed. |
+| 71 | Slice 03 | impl | findings | slice-03-impl-r1 + seal-a1 | | Rejected one stale-history finding after Claude consultation; fixed one valid Claude P3 wrap finding. |
+| 72 | Slice 03 | impl | review_clean | slice-03-impl-r2 + seal-a2 | 5c77118 | Codex review and double seal clean; no accepted debt. |
+| 73 | Slice 03 | closure | closed | | | Closure/bookkeeping recorded. |
 
 ## Current Slice
 
-Slice 03 implementation review.
+Slice 04 documentation.
 
 ## Continuation
 
-Run Slice 03 implementation review against the implementation commit.
+Draft Slice 04 documentation for seal reviewer independence, fallback handling,
+and usable-output evidence rules.
