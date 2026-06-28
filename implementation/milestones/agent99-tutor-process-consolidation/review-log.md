@@ -767,3 +767,230 @@ worktree before/after snapshots.
 - Claude CLI seal half: `VERDICT: 0 findings`, `EXIT=0`, using
   `claude -p --model opus --effort max --permission-mode bypassPermissions`.
 - Outcome: Slice 03 implementation sealed `review_clean`; no accepted debt.
+
+## Slice 04 Documentation
+
+### slice-04-doc-r1
+
+Codex review completed with `VERDICT: 1 finding`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+- `F01 [P2]` fixed: closeout tests now inspect global Active Continuation
+  directly instead of allowing the S2 closed status to pass indirectly.
+
+### slice-04-doc-r2
+
+Codex review completed with `VERDICT: 1 finding`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+- `F01 [P1]` fixed: authorized fallback output must meet the same usable seal
+  evidence rules as the required non-Codex seal half.
+
+### slice-04-doc-r3
+
+Codex review completed with `VERDICT: 0 findings`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+### slice-04-doc-seal-a1
+
+- Codex seal half: `VERDICT: 1 finding`, `EXIT=0`.
+- Claude CLI seal half: `VERDICT: 2 findings`, `EXIT=0`, using
+  `claude -p --model opus --effort max --permission-mode bypassPermissions`.
+- Outcome: seal broken; fixed all findings and returned to the Codex loop.
+- Codex `F01 [P1]` fixed: both seal halves must receive the same review prompt
+  and neither half may see the other's output before both finish.
+- Claude `F01 [P2]` fixed: roadmap closeout is now an explicit S2 finish
+  requirement.
+- Claude `F02 [P2]` fixed: Claude's 30-minute availability window is reconciled
+  with the Codex-only 480-second watchdog.
+
+### slice-04-doc-r4
+
+Codex review completed with `VERDICT: 0 findings`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+### slice-04-doc-seal-a2
+
+- Codex seal half: `VERDICT: 1 finding`, `EXIT=0`.
+- Claude CLI seal half: `VERDICT: 2 findings`, `EXIT=0`, using
+  `claude -p --model opus --effort max --permission-mode bypassPermissions`.
+- Outcome: seal broken; fixed all findings and returned to the Codex loop.
+- Codex `F01 [P2]` fixed: Slice 04 closure files are expected and tested.
+- Claude `F01 [P2]` fixed: closeout tests now require the Slice 04 table row,
+  review log, and historical-skeleton boundary.
+- Claude `F02 [P3]` fixed: Claude record-field tests cover `EXIT=`.
+
+### slice-04-doc-r5
+
+Codex review completed with `VERDICT: 2 findings`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+- `F01 [P2]` fixed: the global S2 index row must close exactly.
+- `F02 [P2]` fixed: review-log closeout evidence is tested.
+
+### slice-04-doc-r6
+
+Codex review completed with `VERDICT: 1 finding`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+- `F01 [P2]` fixed: the closure index must list the Slice 04 closure.
+
+### slice-04-doc-r7
+
+Codex review completed with `VERDICT: 2 findings`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+- `F01 [P1]` fixed: S2 publishes reviewed release `v0.3.0`, with `VERSION`,
+  pinning guidance, tag checks, and release sequence.
+- `F02 [P2]` fixed: stale Tutor read-only wording is blocked directly.
+
+### slice-04-doc-r8
+
+Codex review completed with `VERDICT: 2 findings`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+- `F01 [P1]` fixed: Codex seal output has usable-output requirements too.
+- `F02 [P1]` fixed: the final release commit is constrained to
+  closure/bookkeeping changes after the reviewed content commit.
+
+### slice-04-doc-r9
+
+Codex review completed with `VERDICT: 3 findings`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+- `F01 [P1]` fixed: the reviewed-content commit guard now requires a non-empty,
+  valid commit.
+- `F02 [P2]` fixed: post-tag checks verify annotated tag and pushed `main`.
+- `F03 [P2]` fixed: work-log review provenance was corrected.
+
+### slice-04-doc-r10
+
+Codex review completed with `VERDICT: 2 findings`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+- `F01 [P2]` fixed: Claude usable-output tests are Claude-specific.
+- `F02 [P3]` fixed: review-requested provenance was corrected.
+
+### slice-04-doc-r11
+
+Codex review completed with `VERDICT: 1 finding`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+- `F01 [P2]` fixed: milestone status, current-slice, and continuation closeout
+  are tested directly.
+
+### slice-04-doc-r12
+
+Codex review completed with `VERDICT: 0 findings`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+### slice-04-doc-seal-a3
+
+- Codex seal half: `VERDICT: 0 findings`, `EXIT=0`.
+- Claude CLI seal half: `VERDICT: 3 findings`, `EXIT=0`, using
+  `claude -p --model opus --effort max --permission-mode bypassPermissions`.
+- Outcome: seal broken; fixed all findings and returned to the Codex loop.
+- Claude `F01 [P2]` fixed: fallback base-model-family and settings-only tests
+  are separate.
+- Claude `F02 [P3]` fixed: watchdog scope is named in Scope.
+- Claude `F03 [P3]` fixed: the global S2 row must record reviewed release
+  `v0.3.0`.
+
+### slice-04-doc-r13
+
+Codex review completed with `VERDICT: 0 findings`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+### slice-04-doc-seal-a4
+
+- Codex seal half: `VERDICT: 0 findings`, `EXIT=0`.
+- Claude CLI seal half: `VERDICT: 2 findings`, `EXIT=0`, using
+  `claude -p --model opus --effort max --permission-mode bypassPermissions`.
+- Outcome: seal broken; fixed both findings and returned to the Codex loop.
+- Claude `F01 [P3]` fixed: the Claude watchdog guard allows an explicit
+  exemption sentence while still forbidding applying `sleep 480` to Claude.
+- Claude `F02 [P3]` fixed: the Slice 04 closure work-log row is tested.
+
+### slice-04-doc-r14
+
+Codex review completed with `VERDICT: 1 finding`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+- `F01 [P3]` fixed: missing review-requested provenance for r14 was added.
+
+### slice-04-doc-r15
+
+Codex review completed with `VERDICT: 1 finding`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+- `F01 [P2]` fixed: all-required record-field and restricted-mode checks are
+  split into individual tests.
+
+### slice-04-doc-r16
+
+Codex review completed with `VERDICT: 2 findings`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+- `F01 [P2]` fixed: Claude record-field tests are tied to Claude seal output.
+- `F02 [P2]` fixed: fallback usable-output tests cover worktree invalidation
+  and unchanged artifact.
+
+### slice-04-doc-r17
+
+Codex review completed with `VERDICT: 0 findings`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+### slice-04-doc-seal-a5
+
+- Codex seal half: `VERDICT: 1 finding`, `EXIT=0`.
+- Claude CLI seal half: `VERDICT: 1 finding`, `EXIT=0`, using
+  `claude -p --model opus --effort max --permission-mode bypassPermissions`.
+- Outcome: seal broken; fixed both findings and returned to the Codex loop.
+- Codex `F01 [P2]` fixed: Codex-hosted and OpenAI/GPT-family fallback
+  exclusions are tested separately.
+- Claude `F01 [P3]` fixed: Slice 04 documentation review traceability is now
+  recorded durably in this review log.
+
+### slice-04-doc-r18
+
+Codex review completed with `VERDICT: 0 findings`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+### slice-04-doc-seal-a6
+
+- Codex seal half: `VERDICT: 0 findings`, `EXIT=0`.
+- Claude CLI seal half: `VERDICT: 2 findings`, `EXIT=0`, using
+  `claude -p --model opus --effort max --permission-mode bypassPermissions`.
+- Outcome: seal broken; fixed both findings and returned to the Codex loop.
+- Claude `F01 [P1]` fixed: active-state closeout tests are scoped to active
+  sections rather than append-only historical work-log text.
+- Claude `F02 [P2]` fixed: Codex and Claude seal usable-output tests cover
+  seal-specific worktree invalidation and unchanged artifact.
+
+### slice-04-doc-r19
+
+Codex review completed with `VERDICT: 0 findings`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+### slice-04-doc-seal-a7
+
+- Codex seal half: `VERDICT: 2 findings`, `EXIT=0`.
+- Claude CLI seal half: `VERDICT: 0 findings`, `EXIT=0`, using
+  `claude -p --model opus --effort max --permission-mode bypassPermissions`.
+- Outcome: seal broken; fixed both findings and returned to the Codex loop.
+- Codex `F01 [P1]` fixed: review-log traceability now records r18, seal-a6,
+  r19, and seal-a7.
+- Codex `F02 [P2]` fixed: restricted-mode tests require prohibition instead
+  of simple mention.
+
+### slice-04-doc-r20
+
+Codex review completed with `VERDICT: 0 findings`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+### slice-04-doc-seal-a8
+
+- Codex seal half: `VERDICT: 0 findings`, `EXIT=0`.
+- Claude CLI seal half: `VERDICT: 0 findings`, `EXIT=0`, using
+  `claude -p --model opus --effort max --permission-mode bypassPermissions`.
+- Outcome: Slice 04 documentation sealed `ready`; no accepted debt.
