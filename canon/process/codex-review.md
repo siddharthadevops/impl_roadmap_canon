@@ -67,10 +67,17 @@ INVALID: worktree changed during review; discard this output and inspect git sta
 
 The same worktree before/after invalidation applies to Claude CLI review runs.
 
+Seal usable-output requirements:
+
+- Codex seal: `EXIT=0`, `VERDICT:`, finding-count consistency, no worktree invalidation marker, unchanged artifact.
+- Claude CLI seal: `EXIT=0`, `VERDICT:`, finding-count consistency, no worktree invalidation marker, unchanged artifact.
+- authorized fallback: `EXIT=0`, `VERDICT:`, count consistency, no worktree invalidation marker, unchanged artifact.
+
 ## Watchdog
 
 macOS does not provide `timeout` by default, so run Codex reviews with a
-watchdog and the worktree check:
+watchdog and the worktree check. This 480-second watchdog is Codex-only; the
+480-second watchdog does not apply to Claude seal runs.
 
 ```bash
 OUT=implementation/review-work/<milestone>/<name>.md
@@ -106,6 +113,48 @@ They are not review rounds: reviewer findings are claims, not facts; the
 orchestrator still adjudicates after reading the different LLM family response,
 including when the doubt came from a same-family sub-agent. If the issue remains
 unresolved, stop and consult the operator.
+
+## Seal Independence
+
+Run the double seal as two independent reviews on the same unchanged artifact.
+Codex is the mandatory Codex seal half. The non-Codex seal half must run in a
+fresh independent context, not the thread or agent that drafted or implemented
+the artifact. Give both halves the same review prompt; do not show either
+reviewer the other output before both have completed.
+
+When Codex is the worker/orchestrator, run the required non-Codex half through
+Claude CLI:
+
+```bash
+claude -p --model opus --effort max --permission-mode bypassPermissions \
+  < /path/to/review-prompt.txt > /path/to/last-message.txt
+```
+
+Record the Claude CLI reviewer, model/settings, command surface, result, and
+`EXIT=` in the durable review log. Claude CLI seal runs must allow at least 30
+minutes before silence or normal long runtime can be classified as unavailable.
+Do not use `--safe-mode`, `--tools ''`, or `--permission-mode plan` for Claude
+seal runs.
+
+If the required Claude CLI seal half is unavailable, do not silently fall back.
+The seal remains incomplete unless the operator explicitly authorizes a fallback
+for that seal attempt. Any authorized fallback must be an independent non-Codex
+reviewer whose base model family differs from the mandatory Codex seal half.
+Authorized fallback model independence is base-family independence;
+settings-only differences are insufficient. A Codex-hosted sub-agent or
+OpenAI/GPT-family reviewer cannot replace the required non-Codex seal half for
+a Codex-orchestrated seal.
+
+Record these fallback fields for every fallback attempt:
+
+- fallback reviewer.
+- fallback model/settings.
+- fallback command surface.
+- fallback reason.
+- fallback operator authorization.
+- fallback result.
+
+Fallback output must meet the usable-output requirements above.
 
 ## Prompt Shape
 

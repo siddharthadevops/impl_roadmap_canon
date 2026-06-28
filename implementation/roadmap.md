@@ -17,6 +17,11 @@ S1 made the doubt, disagreement, cross-model consultation, adjudication, and
 finding-verification protocol explicit, and publishes it as reviewed release
 `v0.2.0`.
 
+S2 moved common process rules proven in Agent99 and Tutor into the common canon
+while keeping live project state local. It adds required local context,
+non-canonical planning-material boundaries, broad reviewer invocation, and seal
+reviewer independence as reviewed release `v0.3.0`.
+
 ## Next Direction
 
 Open future canon changes as new milestones. Keep consuming product
