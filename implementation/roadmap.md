@@ -22,6 +22,10 @@ while keeping live project state local. It adds required local context,
 non-canonical planning-material boundaries, broad reviewer invocation, and seal
 reviewer independence as reviewed release `v0.3.0`.
 
+S3 reduces review latency without weakening evidence. It makes local checkout
+inspection explicit for reviews and requires concurrent double-seal launch when
+possible as reviewed release `v0.4.0`.
+
 ## Next Direction
 
 Open future canon changes as new milestones. Keep consuming product

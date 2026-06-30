@@ -37,6 +37,9 @@ Review prompts do not need to enumerate every possible directory. Reviewers may
 inspect sibling repositories or dependency checkouts only when they are relevant
 to the artifact and discovered while tracing that artifact.
 
+Review prompts must include a local-inspection rule: local checkout is the source of truth for content inspection when it contains the reviewed content.
+Use local search and file-reading tools for speed. Git is used for scope, diff comparison, relevant history, and commits/refs verification.
+
 ## Worktree Check
 
 Every broad Codex or Claude review run must compare worktree state before and
@@ -117,10 +120,17 @@ unresolved, stop and consult the operator.
 ## Seal Independence
 
 Run the double seal as two independent reviews on the same unchanged artifact.
-Codex is the mandatory Codex seal half. The non-Codex seal half must run in a
-fresh independent context, not the thread or agent that drafted or implemented
-the artifact. Give both halves the same review prompt; do not show either
-reviewer the other output before both have completed.
+Codex is the mandatory Codex seal half. Claude CLI is the required non-Codex
+seal half when Codex is the worker/orchestrator. The non-Codex seal half must
+run in a fresh independent context, not the thread or agent that drafted or
+implemented the artifact. Give both halves the same review prompt; do not show
+either reviewer the other output before both have completed.
+
+Launch both seal halves concurrently when both required reviewers are available
+and the runner can preserve no-peek independence. When a seal is not concurrent,
+record the reason in the durable review log. Sequential seal launch still must
+use the same unchanged artifact, same prompt, and no shared outputs until both
+halves complete.
 
 When Codex is the worker/orchestrator, run the required non-Codex half through
 Claude CLI:
@@ -178,6 +188,10 @@ Keep prompts thin. Include:
 - the rule that the orchestrator must verify findings against files, diffs,
   tests, or commands before triage.
 - the rule that memory or chat is not evidence for triage.
+- the rule that the local filesystem checkout is the source of truth for
+  content inspection when available, local search and file-reading tools are
+  preferred for speed, and Git is used for scope, diff comparison, relevant
+  history, and commit/ref verification.
 - the rule that doubts and disagreements are discussed with a different LLM
   family when available, including doubts raised by a same-family sub-agent.
 - the rule that unresolved disagreement, or unavailable cross-family

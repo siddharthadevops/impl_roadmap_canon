@@ -133,12 +133,18 @@ operator acceptance and must be recorded in local state.
 ### Double Seal
 
 The double final seal uses two independent reviewers on the same unchanged
-artifact. Codex remains the mandatory Codex seal half. The other seal half must
-run in a fresh independent context, not the thread or agent that drafted or
-implemented the artifact.
+artifact. Codex remains the mandatory Codex seal half. Claude CLI is the
+required non-Codex seal half when Codex is the worker/orchestrator. The other
+seal half must run in a fresh independent context, not the thread or agent that
+drafted or implemented the artifact.
 
 Both seal halves receive the same review prompt; neither reviewer may see the other half's output.
 Share outputs only after both seal halves have completed.
+
+Launch both seal halves concurrently when both required reviewers are available
+and the runner can preserve no-peek independence. When a seal is not concurrent,
+record the reason. Sequential launch still preserves the same unchanged
+artifact, same prompt, and no shared outputs until both halves complete.
 
 When Codex is the worker/orchestrator, the non-Codex seal half must run through
 Claude CLI with the command shape in `codex-review.md`. Record the Claude CLI
