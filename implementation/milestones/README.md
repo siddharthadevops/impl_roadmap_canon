@@ -17,9 +17,9 @@ Delivery follows the local canon:
 | S0 | Self-canon bootstrap review | Canon bootstrap | Closed (reviewed release `v0.1.1`) | Process layout | [README](self-canon-bootstrap-review/README.md) |
 | S1 | Cross-model adjudication and finding verification | Process canon | Closed (reviewed release `v0.2.0`) | Process layout | [README](cross-model-adjudication/README.md) |
 | S2 | Agent99/Tutor process consolidation | Process canon | Closed (reviewed release `v0.3.0`) | Process layout | [README](agent99-tutor-process-consolidation/README.md) |
-| S3 | Review efficiency and concurrent seals | Process canon | Open (skeleton documentation) | Process layout | [README](review-efficiency-and-concurrent-seals/README.md) |
+| S3 | Review efficiency and concurrent seals | Process canon | Open (Slice 01 implementation) | Process layout | [README](review-efficiency-and-concurrent-seals/README.md) |
 
 ## Active Continuation
 
 **S3 (`review-efficiency-and-concurrent-seals`) is open.** Continue from its
-milestone README. The current unit is skeleton documentation.
+milestone README. The current unit is Slice 01 implementation.

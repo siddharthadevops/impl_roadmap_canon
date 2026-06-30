@@ -1,6 +1,6 @@
 # Review Efficiency And Concurrent Seals
 
-Status: open (Slice 01 documentation)
+Status: open (Slice 01 implementation)
 
 ## Boundary
 
@@ -60,7 +60,7 @@ the same evidence, no-edit, and independence guarantees.
 
 | Slice | Title | Status | Notes |
 |---|---|---|---|
-| 01 | Review latency reduction without weaker evidence | planned | Add local-checkout prompt guidance and concurrent double-seal rule; publish reviewed tag `v0.4.0`. |
+| 01 | Review latency reduction without weaker evidence | ready | Add local-checkout prompt guidance and concurrent double-seal rule; publish reviewed tag `v0.4.0`. |
 
 ## Work Log
 
@@ -78,11 +78,18 @@ the same evidence, no-edit, and independence guarantees.
 | Skeleton | doc | fixed | skeleton-doc-r9 | | Updated work-log traceability after r9 finding. |
 | Skeleton | doc | review_requested | skeleton-doc-r10 + seal-a2 | | Codex r10 clean; documentation double seal launched. |
 | Skeleton | doc | ready | skeleton-doc-r10 + seal-a2 | | Double seal clean; no accepted debt. |
+| Slice 01 | doc | fixed | slice-01-doc-r1 | | Fixed status, work-log shape, and no-edit/egress acceptance coverage. |
+| Slice 01 | doc | fixed | slice-01-doc-r2 | | Added active-continuation closeout tests. |
+| Slice 01 | doc | fixed | slice-01-doc-r3 | | Added seal-pairing and usable-output preservation tests. |
+| Slice 01 | doc | fixed | slice-01-doc-r4 | | Added slice-state, product-neutrality, closure-index, and seal-evidence tests. |
+| Slice 01 | doc | fixed | slice-01-doc-r5 | | Updated global continuation to Slice 01 documentation. |
+| Slice 01 | doc | review_requested | slice-01-doc-r6 + seal-a1 | | Codex r6 clean; documentation double seal launched. |
+| Slice 01 | doc | ready | slice-01-doc-r6 + seal-a1 | | Double seal clean; no accepted debt. |
 
 ## Current Slice
 
-Slice 01 documentation.
+Slice 01 implementation.
 
 ## Continuation
 
-Draft Slice 01, then review and seal it before changing common canon files.
+Implement Slice 01 from the sealed slice note, then run implementation review.

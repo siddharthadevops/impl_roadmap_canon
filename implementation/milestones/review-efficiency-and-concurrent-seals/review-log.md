@@ -94,3 +94,65 @@ worktree before/after snapshots.
 - Claude CLI seal half: `VERDICT: 0 findings`, `EXIT=0`, using
   `claude -p --model opus --effort max --permission-mode bypassPermissions`.
 - Outcome: skeleton documentation sealed `ready`; no accepted debt.
+
+## Slice 01 Documentation
+
+### slice-01-doc-r1
+
+Codex review completed with `VERDICT: 3 findings`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+- `F01 [P1]` fixed: the slice note status now reflects the intended sealed
+  state before final documentation seal.
+- `F02 [P1]` fixed: the S3 work-log row now matches the table schema.
+- `F03 [P1]` fixed: acceptance criteria and tests now preserve no-edit, egress,
+  and Sensitive Local Exclusions rules.
+
+### slice-01-doc-r2
+
+Codex review completed with `VERDICT: 1 finding`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+- `F01 [P1]` fixed: pre-tag tests now verify global and S3 continuation
+  closeout state.
+
+### slice-01-doc-r3
+
+Codex review completed with `VERDICT: 1 finding`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+- `F01 [P1]` fixed: acceptance criteria and tests now preserve mandatory
+  Codex/Claude seal pairing and usable-output rules.
+
+### slice-01-doc-r4
+
+Codex review completed with `VERDICT: 4 findings`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+- `F01 [P2]` fixed: the slice table now matches the documentation review state.
+- `F02 [P2]` fixed: product-neutrality is now an acceptance criterion with a
+  direct common-canon guard.
+- `F03 [P2]` fixed: pre-tag tests now require the closure index to list Slice
+  01 closure.
+- `F04 [P2]` fixed: pre-tag tests now require implementation seal evidence in
+  the review log.
+
+### slice-01-doc-r5
+
+Codex review completed with `VERDICT: 1 finding`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+- `F01 [P1]` fixed: the global milestone index now routes continuation to Slice
+  01 documentation.
+
+### slice-01-doc-r6
+
+Codex review completed with `VERDICT: 0 findings`, `EXIT=0`, and matching
+worktree before/after snapshots.
+
+### slice-01-doc-seal-a1
+
+- Codex seal half: `VERDICT: 0 findings`, `EXIT=0`.
+- Claude CLI seal half: `VERDICT: 0 findings`, `EXIT=0`, using
+  `claude -p --model opus --effort max --permission-mode bypassPermissions`.
+- Outcome: Slice 01 documentation sealed `ready`; no accepted debt.
