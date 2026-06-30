@@ -18,8 +18,11 @@ Delivery follows the local canon:
 | S1 | Cross-model adjudication and finding verification | Process canon | Closed (reviewed release `v0.2.0`) | Process layout | [README](cross-model-adjudication/README.md) |
 | S2 | Agent99/Tutor process consolidation | Process canon | Closed (reviewed release `v0.3.0`) | Process layout | [README](agent99-tutor-process-consolidation/README.md) |
 | S3 | Review efficiency and concurrent seals | Process canon | Closed (reviewed release `v0.4.0`) | Process layout | [README](review-efficiency-and-concurrent-seals/README.md) |
+| S4 | Thin skeleton and slice budget discipline | Process canon | Active — Slice 01 documentation pending | Process layout | [README](thin-skeleton-and-slice-budget/README.md) |
 
 ## Active Continuation
 
-No active milestone. For any future canon change, read the roadmap before
-opening a new milestone.
+**S4 — Thin Skeleton And Slice Budget Discipline** is active. Skeleton
+documentation is sealed `ready`; commit the skeleton state, then draft Slice 01
+documentation. Follow the
+[S4 README](thin-skeleton-and-slice-budget/README.md).
