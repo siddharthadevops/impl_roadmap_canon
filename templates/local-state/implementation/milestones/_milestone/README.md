@@ -35,7 +35,7 @@ State the invariant or contract every slice in this milestone must preserve.
 
 | Slice | Title | Status | Notes |
 |---|---|---|---|
-| 01 | <title> | draft | |
+| 01 | <title> | planned | Rough intent only; draft the slice note after the skeleton is sealed and committed. |
 
 ## Work Log
 
@@ -45,9 +45,9 @@ State the invariant or contract every slice in this milestone must preserve.
 
 ## Current Slice
 
-None until the skeleton is sealed `ready`.
+None until the skeleton is sealed `ready` and committed.
 
 ## Continuation
 
-Continue from the current slice above. If no slice is current, open the next
-slice only after the skeleton is sealed.
+Continue from the current slice above. If no slice is current, draft the next
+slice note only after the skeleton is sealed and committed.

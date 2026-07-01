@@ -117,6 +117,17 @@ orchestrator still adjudicates after reading the different LLM family response,
 including when the doubt came from a same-family sub-agent. If the issue remains
 unresolved, stop and consult the operator.
 
+## Quota And Rate Limits
+
+If a review CLI exits or refuses to start because of quota or rate limits and
+prints a concrete resume time, record the condition and resume time in the
+durable review log or work log, wait until that time, then rerun the same
+review or continue from the recorded local state. This is a pause, not a
+milestone blockage.
+
+If the CLI gives no concrete resume time, treat it as reviewer unavailability
+under the normal review or seal rules.
+
 ## Seal Independence
 
 Run the double seal as two independent reviews on the same unchanged artifact.
@@ -196,6 +207,9 @@ Keep prompts thin. Include:
   family when available, including doubts raised by a same-family sub-agent.
 - the rule that unresolved disagreement, or unavailable cross-family
   consultation, stops and asks the operator.
+- the rule that quota or rate-limit pauses with a concrete resume time should
+  be recorded, waited out, and resumed rather than treated as milestone
+  blockage.
 - instructions to ignore prior review outputs, review logs, closures, and work
   log findings.
 - output format.
@@ -232,8 +246,10 @@ implementation/review-work/process/
 
 Durable evidence lives in tracked local state:
 
-- milestone review output is summarized in the milestone's `review-log.md`.
-- process-doc review output is summarized in `implementation/process/review-log.md`.
+- milestone review output is summarized compactly in the milestone's
+  `review-log.md`.
+- process-doc review output is summarized compactly in
+  `implementation/process/review-log.md`.
 - slice debt is recorded in the closure.
 - skeleton or process-doc debt is recorded in the relevant review log.
 

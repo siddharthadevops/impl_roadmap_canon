@@ -57,6 +57,11 @@ implementation/
 There is no block level. Keep slices narrow: one clear intent, one reviewable
 surface, no unrelated scope.
 
+Plan slices so the expected change diff aims to stay under about 500 changed
+lines where practical. Generated, lockfile, and mechanical changes do not count
+toward that aim. Do not split cohesive work artificially; if a slice is expected
+to exceed the target, record the reason in the slice note.
+
 ## Reuse Gate
 
 Before a skeleton, slice note, or implementation proposes new machinery, it must
@@ -102,12 +107,16 @@ It must not hold durable architecture material or implementation guide material.
 ## Cycle
 
 1. **Milestone skeleton.** Create the milestone `README.md`, `slices/`,
-   `closures/`, and `review-log.md`. Review the skeleton until sealed `ready`.
-   Commit the sealed skeleton before slice work begins.
+   `closures/`, and `review-log.md`. Skeletons name planned slices, rough slice
+   intent, shared contracts, and continuation state. They do not contain slice
+   scope, files, tests, risks, or acceptance detail. Do not draft slice notes
+   during skeleton work. Review the skeleton until sealed `ready`. Commit the
+   sealed skeleton before slice work begins.
 2. **Slice documentation.** Draft the slice note: scope, non-goals, expected
    files, dependencies, acceptance criteria, tests, risks, and reuse posture.
-   Review until sealed `ready`. Commit the sealed slice note before production
-   code begins.
+   Unopened slice notes are drafted only after the skeleton is sealed `ready`
+   and committed. Review until sealed `ready`. Commit the sealed slice note
+   before production code begins.
 3. **Slice implementation.** Implement only the approved scope. Verify, commit
    the implementation, review until sealed `review_clean`, write the closure,
    update logs, then commit bookkeeping separately.
@@ -232,6 +241,14 @@ short and executable:
 - acceptance criteria.
 - tests and risks.
 - current continuation state.
+
+Durable review logs summarize review state, findings, triage, seal outcomes,
+and accepted debt. Full prompts and reviewer output stay in git-ignored
+`implementation/review-work/`.
+
+Skeletons are planning contracts, not slice notes. They keep rough slice intent
+and shared invariants, then leave scope, files, tests, risks, and acceptance
+detail to the just-in-time slice note.
 
 Avoid pseudo-code, defensive FAQs, repetition, and future milestone chains. If a
 document starts specifying control flow that belongs in code, reduce it to

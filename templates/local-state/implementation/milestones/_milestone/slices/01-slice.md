@@ -2,6 +2,9 @@
 
 Status: draft
 
+Create this file only after the milestone skeleton is sealed `ready` and
+committed.
+
 ## Scope
 
 ## Non-Goals
@@ -20,6 +23,16 @@ Status: draft
 - Named planning material:
 - Adopt / Revise / Reject:
 - Notes:
+
+## Dependencies
+
+- Milestone skeleton sealed and committed:
+
+## Slice Size
+
+Aim for under about 500 expected changed lines where practical. Generated,
+lockfile, and mechanical changes do not count toward that aim. If this slice is
+expected to exceed the target, record the cohesive reason here.
 
 ## Expected Files
 

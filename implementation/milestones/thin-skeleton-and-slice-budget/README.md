@@ -1,6 +1,6 @@
 # Thin Skeleton And Slice Budget Discipline
 
-Status: Slice 01 documentation sealed; implementation pending
+Status: Slice 01 implementation review pending
 
 ## Boundary
 
@@ -57,7 +57,7 @@ CLI quota pauses.
 
 | Slice | Title | Status | Notes |
 |---|---|---|---|
-| 01 | Planning cost controls and quota resume rule | doc ready | Add thin-skeleton, just-in-time slice-note, slice budget, compact review-log, and CLI quota-resume rules. |
+| 01 | Planning cost controls and quota resume rule | implementation review pending | Add thin-skeleton, just-in-time slice-note, slice budget, compact review-log, and CLI quota-resume rules. |
 
 ## Work Log
 
@@ -65,12 +65,13 @@ CLI quota pauses.
 |---|---|---|---|---|---|
 | Skeleton | doc | ready | skeleton-doc-r3 + seal-a3 | | Double seal clean; no accepted debt. |
 | Slice 01 | doc | ready | slice-01-doc-r4 + seal-a3 | | Double seal clean; no accepted debt. |
+| Slice 01 | impl | review_requested | slice-01-impl-r4 + seal-a2 | | Codex r4 clean; implementation double seal launched. |
 
 ## Current Slice
 
-Slice 01 implementation.
+Slice 01 implementation review.
 
 ## Continuation
 
-Commit the sealed Slice 01 note, then implement only the approved canon and
-template changes.
+Continue Slice 01 implementation review and seal. Do not close the slice until
+implementation review is clean.
