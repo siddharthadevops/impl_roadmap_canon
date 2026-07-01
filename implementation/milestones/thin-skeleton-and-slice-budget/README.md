@@ -65,7 +65,7 @@ CLI quota pauses.
 |---|---|---|---|---|---|
 | Skeleton | doc | ready | skeleton-doc-r3 + seal-a3 | | Double seal clean; no accepted debt. |
 | Slice 01 | doc | ready | slice-01-doc-r4 + seal-a3 | | Double seal clean; no accepted debt. |
-| Slice 01 | impl | review_requested | slice-01-impl-r4 + seal-a2 | | Codex r4 clean; implementation double seal launched. |
+| Slice 01 | impl | review_requested | slice-01-impl-r5 + seal-a3 | c3e1869 | Codex r5 clean; implementation double seal launched. |
 
 ## Current Slice
 

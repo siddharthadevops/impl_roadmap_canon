@@ -153,3 +153,17 @@ worktree before/after snapshots.
 
 Codex review completed with `VERDICT: 0 findings`, `EXIT=0`, and matching
 worktree before/after snapshots.
+
+### slice-01-impl-seal-a2
+
+- Codex seal half: `VERDICT: 0 findings`, `EXIT=0`.
+- Claude CLI seal half: `VERDICT: 1 finding`, `EXIT=0`, using
+  `claude -p --model opus --effort max --permission-mode bypassPermissions`.
+- Outcome: seal broken; fixed finding and returned to Codex review.
+- Claude `F01 [P2]` fixed: implementation is committed at `c3e1869` before the
+  next implementation review.
+
+### slice-01-impl-r5
+
+Codex review completed with `VERDICT: 0 findings`, `EXIT=0`, and matching
+worktree before/after snapshots.
