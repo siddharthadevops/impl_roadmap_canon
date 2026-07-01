@@ -1,6 +1,6 @@
 # Slice 01 - Planning Cost Controls And Quota Resume
 
-Status: review_requested
+Status: ready
 
 ## Scope
 
