@@ -26,9 +26,9 @@ S3 reduces review latency without weakening evidence. It makes local checkout
 inspection explicit for reviews and requires concurrent double-seal launch when
 possible as reviewed release `v0.4.0`.
 
-S4 is active and proposes milestone planning cost controls: thin skeletons,
-just-in-time slice notes, small reviewable slice diffs, compact durable review
-logs, and resumable CLI quota pauses.
+S4 adds milestone planning cost controls as reviewed release `v0.5.0`: thin
+skeletons, just-in-time slice notes, small reviewable slice diffs, compact
+durable review logs, and resumable CLI quota pauses.
 
 ## Next Direction
 
