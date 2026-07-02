@@ -1,6 +1,6 @@
 # Review/Seal Convergence Formula
 
-Status: active
+Status: closed
 
 ## Boundary
 
@@ -57,7 +57,7 @@ substantially changes scope or design.
 
 | Slice | Title | Status | Notes |
 |---|---|---|---|
-| 01 | Review/seal convergence formula | ready | Operator-approved trial process; implementation review covers milestone state and canon wording together. |
+| 01 | Review/seal convergence formula | closed | Reviewed release `v0.6.0`; no accepted debt. |
 
 ## Work Log
 
@@ -65,13 +65,14 @@ substantially changes scope or design.
 |---|---|---|---|---|---|
 | Skeleton | doc | ready | operator-approved trial | | Thin local state for S5. |
 | Slice 01 | doc | ready | operator-approved trial | | Slice note drafted for the approved canon change. |
-| Slice 01 | impl | review_requested | | | Implementation commit is under review; run trial review/seal loop. |
+| Slice 01 | impl | review_clean | slice-01-impl-r3 + seal-a1 | ebc5059 | Codex and Claude normal reviews clean; double seal clean. |
+| Slice 01 | closure | closed | | | Closure/bookkeeping recorded. |
 
 ## Current Slice
 
-Slice 01 implementation review.
+None. S5 is closed.
 
 ## Continuation
 
-Continue from Slice 01 implementation review. Use the S5 trial formula recorded
-above.
+S5 is closed. Continue by reading the global milestone index and roadmap before
+opening any future canon change.

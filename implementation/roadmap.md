@@ -30,7 +30,7 @@ S4 adds milestone planning cost controls as reviewed release `v0.5.0`: thin
 skeletons, just-in-time slice notes, small reviewable slice diffs, compact
 durable review logs, and resumable CLI quota pauses.
 
-S5 targets reviewed release `v0.6.0` for the review/seal convergence formula:
+S5 adds the review/seal convergence formula as reviewed release `v0.6.0`:
 Codex CLI reviews run clean first, Claude CLI reviews run clean second, full
 official verification brackets review, and later seal findings return to the
 full seal round unless the fix materially changes scope or design.

@@ -19,9 +19,9 @@ Delivery follows the local canon:
 | S2 | Agent99/Tutor process consolidation | Process canon | Closed (reviewed release `v0.3.0`) | Process layout | [README](agent99-tutor-process-consolidation/README.md) |
 | S3 | Review efficiency and concurrent seals | Process canon | Closed (reviewed release `v0.4.0`) | Process layout | [README](review-efficiency-and-concurrent-seals/README.md) |
 | S4 | Thin skeleton and slice budget discipline | Process canon | Closed (reviewed release `v0.5.0`) | Process layout | [README](thin-skeleton-and-slice-budget/README.md) |
-| S5 | Review/seal convergence formula | Process canon | Active | Process layout | [README](review-seal-convergence-formula/README.md) |
+| S5 | Review/seal convergence formula | Process canon | Closed (reviewed release `v0.6.0`) | Process layout | [README](review-seal-convergence-formula/README.md) |
 
 ## Active Continuation
 
-S5 is active. Continue from
-[`review-seal-convergence-formula/README.md`](review-seal-convergence-formula/README.md).
+No active milestone. For any future canon change, read the roadmap before
+opening a new milestone.
