@@ -2,13 +2,18 @@
 
 Status: common canon
 
-Codex is the per-round reviewer and one half of the double final seal. Each run
-must be fresh, stateless, review-only, and saved as evidence under the consuming
-project's git-ignored `implementation/review-work/` directory.
+Codex CLI and Claude CLI are the normal review families. Codex is one half of
+the double final seal, and Claude CLI is the required non-Codex half when Codex
+is the worker/orchestrator. Each run must be fresh, stateless, review-only, and
+saved as evidence under the consuming project's git-ignored
+`implementation/review-work/` directory.
 
 ## Invocation
 
-Default Codex runner:
+All Codex and Claude reviews, seals, and disagreement dialogues must run through
+CLI invocations.
+
+Default Codex CLI runner:
 
 ```bash
 codex exec --dangerously-bypass-approvals-and-sandbox \
@@ -16,8 +21,7 @@ codex exec --dangerously-bypass-approvals-and-sandbox \
   - < /path/to/review-prompt.txt
 ```
 
-When a process invokes Claude review commands, use the full-access Claude CLI
-shape:
+Default Claude CLI runner:
 
 ```bash
 claude -p --model opus --effort max --permission-mode bypassPermissions \
@@ -76,11 +80,40 @@ Seal usable-output requirements:
 - Claude CLI seal: `EXIT=0`, `VERDICT:`, finding-count consistency, no worktree invalidation marker, unchanged artifact.
 - authorized fallback: `EXIT=0`, `VERDICT:`, count consistency, no worktree invalidation marker, unchanged artifact.
 
+## Review/Seal Convergence
+
+The full official verification suite is the current verification command set
+recorded in local state for the project and active slice.
+
+For each reviewed artifact, after the approved change is applied:
+
+1. Run local/focused checks after each modification when they are cheap or
+   directly relevant.
+2. Run the full official verification suite before normal review starts.
+3. Run normal Codex CLI review rounds until Codex returns `VERDICT: 0`.
+4. Run normal Claude CLI review rounds until Claude returns `VERDICT: 0`.
+5. Run the full official verification suite again.
+6. Run full seal rounds until clean.
+
+A full seal round means the Codex seal half and Claude CLI seal half review the
+same unchanged artifact with the same prompt, under the no-peek independence
+rules below.
+
+If a seal round finds a valid issue, verify it against local files, diffs,
+tests, or commands; fix it; run relevant local/focused checks; then repeat the
+full seal round only. Do not return to normal review rounds after a seal
+finding unless the fix substantially changes scope or design.
+
+If the full official verification suite after normal review fails, fix it and
+restart from the pre-review full verification step.
+
 ## Watchdog
 
 macOS does not provide `timeout` by default, so run Codex reviews with a
 watchdog and the worktree check. This 480-second watchdog is Codex-only; the
-480-second watchdog does not apply to Claude seal runs.
+480-second watchdog does not apply to Claude CLI review or seal runs. Claude
+CLI review and seal runs must allow at least 30 minutes before silence or
+normal long runtime can be classified as unavailable.
 
 ```bash
 OUT=implementation/review-work/<milestone>/<name>.md
@@ -108,14 +141,17 @@ M=$(grep -cE '^([0-9]+\. )?F[0-9]+ \[P[0-3]\]' "$OUT")
 rm -f "$RAW" "$LAST" "$PRE_STATE" "$POST_STATE"
 ```
 
-Free-form adjudication or consultation rounds use the same launch/watch pattern
-but save the whole last message plus `EXIT=`, with no `VERDICT:` parsing.
-Their prompts must include the disputed finding or doubt, the orchestrator's
-proposed resolution, and the files, diffs, tests, or commands already checked.
-They are not review rounds: reviewer findings are claims, not facts; the
-orchestrator still adjudicates after reading the different LLM family response,
-including when the doubt came from a same-family sub-agent. If the issue remains
-unresolved, stop and consult the operator.
+Disagreement dialogue sessions use the same launch/watch pattern but save the
+whole last message plus `EXIT=`, with no `VERDICT:` parsing. Their prompts must
+include the disputed finding or doubt, the orchestrator's proposed resolution,
+and the files, diffs, tests, or commands already checked.
+
+Use one continuous CLI dialogue session with the opposite LLM family for a
+conceptual disagreement or doubt: Codex uses Claude CLI, and Claude uses Codex
+CLI. Do not start separate consultations per review round for the same issue.
+Run at most two dialogue rounds, stopping earlier if agreement is clear. If the
+issue remains unresolved or the opposite CLI family is unavailable, stop and
+consult the operator.
 
 ## Quota And Rate Limits
 
@@ -152,19 +188,16 @@ claude -p --model opus --effort max --permission-mode bypassPermissions \
 ```
 
 Record the Claude CLI reviewer, model/settings, command surface, result, and
-`EXIT=` in the durable review log. Claude CLI seal runs must allow at least 30
-minutes before silence or normal long runtime can be classified as unavailable.
-Do not use `--safe-mode`, `--tools ''`, or `--permission-mode plan` for Claude
-seal runs.
+`EXIT=` in the durable review log. Do not use `--safe-mode`, `--tools ''`, or
+`--permission-mode plan` for Claude seal runs.
 
 If the required Claude CLI seal half is unavailable, do not silently fall back.
 The seal remains incomplete unless the operator explicitly authorizes a fallback
 for that seal attempt. Any authorized fallback must be an independent non-Codex
 reviewer whose base model family differs from the mandatory Codex seal half.
 Authorized fallback model independence is base-family independence;
-settings-only differences are insufficient. A Codex-hosted sub-agent or
-OpenAI/GPT-family reviewer cannot replace the required non-Codex seal half for
-a Codex-orchestrated seal.
+settings-only differences are insufficient. An OpenAI/GPT-family reviewer
+cannot replace the required non-Codex seal half for a Codex-orchestrated seal.
 
 Record these fallback fields for every fallback attempt:
 
@@ -203,10 +236,10 @@ Keep prompts thin. Include:
   content inspection when available, local search and file-reading tools are
   preferred for speed, and Git is used for scope, diff comparison, relevant
   history, and commit/ref verification.
-- the rule that doubts and disagreements are discussed with a different LLM
-  family when available, including doubts raised by a same-family sub-agent.
-- the rule that unresolved disagreement, or unavailable cross-family
-  consultation, stops and asks the operator.
+- the rule that doubts and disagreements use one continuous CLI dialogue session
+  with the opposite LLM family when available.
+- the rule that unresolved disagreement, or unavailable opposite-family CLI
+  dialogue, stops and asks the operator.
 - the rule that quota or rate-limit pauses with a concrete resume time should
   be recorded, waited out, and resumed rather than treated as milestone
   blockage.

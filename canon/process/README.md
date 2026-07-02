@@ -13,7 +13,7 @@ The canon owns process invariants:
 - `milestone -> slice` hierarchy.
 - one active slice at a time.
 - documentation before implementation.
-- review rounds and double final seals.
+- CLI review convergence and double final seals.
 - durable review logs and closure records.
 - continuation from recorded local state, not chat memory.
 
@@ -117,8 +117,10 @@ It must not hold durable architecture material or implementation guide material.
    Unopened slice notes are drafted only after the skeleton is sealed `ready`
    and committed. Review until sealed `ready`. Commit the sealed slice note
    before production code begins.
-3. **Slice implementation.** Implement only the approved scope. Verify, commit
-   the implementation, review until sealed `review_clean`, write the closure,
+3. **Slice implementation.** Implement only the approved scope. Verify with
+   local/focused checks as the artifact changes, run the full official
+   verification suite before review, commit the implementation, review through
+   the CLI convergence loop until sealed `review_clean`, write the closure,
    update logs, then commit bookkeeping separately.
 
 Work one slice to closure before opening the next. A blocked slice remains the
@@ -129,15 +131,34 @@ current slice until it is resolved or explicitly deferred in local state.
 Reviews are run by the orchestrator, not supplied by the operator. Use
 [`codex-review.md`](codex-review.md) for the common evidence contract.
 
-Each phase has:
+Each phase uses the review/seal convergence loop in
+[`codex-review.md`](codex-review.md):
 
-- iterative Codex review rounds.
-- triage for every finding: fixed, rejected with rationale, operator-accepted
-  debt, or blocked for the operator.
-- a double final seal on an unchanged artifact.
+- run local/focused checks after each artifact modification when they are cheap
+  or directly relevant.
+- run the full official verification suite recorded in local state before
+  normal review begins.
+- run normal Codex CLI review rounds until Codex is clean.
+- run normal Claude CLI review rounds until Claude is clean.
+- run the full official verification suite again.
+- run full double-seal rounds until clean on an unchanged artifact.
+
+Triage every finding as fixed, rejected with rationale, operator-accepted debt,
+or blocked for the operator.
 
 `P0` and `P1` findings cannot become debt. `P2` and `P3` debt requires explicit
 operator acceptance and must be recorded in local state.
+
+### Seal Findings
+
+A seal finding is still a claim, not a fact. If a seal round finds a valid
+issue, verify it against local files, diffs, tests, or commands; fix it; run
+relevant local/focused checks; then repeat the full seal round only.
+
+Do not return to normal review rounds after a seal finding unless the fix
+substantially changes scope or design. If the full official verification suite
+after normal review fails, fix it and restart from the pre-review full
+verification step.
 
 ### Double Seal
 
@@ -188,20 +209,22 @@ For each finding, record the outcome in the durable review log:
 
 ### Consultation And Adjudication
 
-The orchestrator adjudicates; reviewers, sub-agents, and consulted LLMs do not.
-When the orchestrator has a doubt or disagrees with a finding, it must discuss
-the issue with a different LLM family when one is available. If Codex is the
-orchestrator, use Claude; if Claude is the orchestrator, use Codex. If a
-same-family sub-agent raises the doubt, treat it as the orchestrator's family
-for this rule and consult a different LLM family.
+The orchestrator adjudicates; reviewers and consulted LLMs do not. When the
+orchestrator has a doubt or disagrees with a finding, it must open one
+continuous CLI dialogue session with the opposite LLM family when one is
+available. If Codex is the orchestrator, use Claude CLI; if Claude is the
+orchestrator, use Codex CLI.
+
+Do not start separate consultations per round for the same conceptual issue.
+Run at most two dialogue rounds, stopping earlier if agreement is clear.
 
 The consultation/adjudication prompt must include the artifact, the finding or
 doubt, the orchestrator's proposed resolution, and the files, diffs, tests, or
 commands already checked. The orchestrator then makes the triage decision.
 
-If a different LLM family is unavailable, or if cross-family discussion does not
-leave a clear resolution, stop and consult the operator. Do not reject a `P0` or
-`P1` finding by orchestrator-only judgment, and never turn `P0`/`P1` into debt.
+If the opposite CLI family is unavailable, or if the dialogue does not leave a
+clear resolution, stop and consult the operator. Do not reject a `P0` or `P1`
+finding by orchestrator-only judgment, and never turn `P0`/`P1` into debt.
 
 Consultation and adjudication rounds are evidence, not review rounds. Record
 their result in the durable review log and keep any scratch output under
